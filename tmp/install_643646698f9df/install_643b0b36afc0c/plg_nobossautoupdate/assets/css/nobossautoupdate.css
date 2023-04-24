@@ -1,0 +1,8 @@
+/* Aumenta select e inputs no J3 para conseguir ler todo o texto qnd select */
+#content .row-fluid #attrib-data input[type=text],
+#content .row-fluid #attrib-data .chzn-container{
+    width: 300px !important;
+}
+#content .row-fluid #attrib-data input[type=email]{
+    width: 286px !important;
+}

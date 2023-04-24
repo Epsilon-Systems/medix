@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.7.1" method="upgrade">
+    <name>COM_NOBOSSTESTIMONIALS</name>
+    <author>No Boss Technology</author>
+    <creationDate>2023-04-10</creationDate>
+    <author>No Boss Technology</author>
+    <autorURL>https://www.nobosstechnology.com/</autorURL>
+    <authorEmail>contact@nobosstechnology.com</authorEmail>
+    <copyright>© 2023 No Boss Technology</copyright>
+    <license>https://www.gnu.org/licenses/lgpl-3.0.en.html GNU/LGPL</license>
+    <version>1.4.9</version>
+    <description>COM_NOBOSSTESTIMONIALS_XML_DESC</description>
+    <scriptfile>script.extension.php</scriptfile>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    
+    <administration>
+        <menu link="option=com_nobosstestimonials&amp;view=testimonials">COM_NOBOSSTESTIMONIALS</menu>
+        <submenu>
+			<menu link="option=com_nobosstestimonials&amp;view=groups">COM_NOBOSSTESTIMONIALS_TITLE_GROUPS</menu>
+            <menu link="option=com_nobosstestimonials&amp;view=testimonials">COM_NOBOSSTESTIMONIALS_TESTIMONIALS</menu>
+		</submenu>
+
+        <files folder="admin">
+            <folder>assets</folder>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>language</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>nobosstestimonials.php</filename>
+            <filename>nobosstestimonials.xml</filename>
+        </files>
+    </administration>
+
+</extension>

@@ -1,0 +1,23 @@
+/* line 1, ../sass/nobossapiconnection.scss */
+.apiconnection__doc-url {
+  font-size: 10px;
+  word-break: break-all;
+  padding: 4px 0px;
+  color: #31708f;
+}
+
+/* line 8, ../sass/nobossapiconnection.scss */
+.apiconnection__status {
+  padding-top: 5px;
+}
+
+/* line 12, ../sass/nobossapiconnection.scss */
+.apiconnection__btn-connect {
+  margin-top: 20px;
+}
+
+/* Joomla 4 */
+/* line 19, ../sass/nobossapiconnection.scss */
+#wrapper #content .apiconnection__status .badge {
+  font-size: 14px;
+}

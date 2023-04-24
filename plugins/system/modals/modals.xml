@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4" type="plugin" group="system" method="upgrade">
+  <name>PLG_SYSTEM_MODALS</name>
+  <description>PLG_SYSTEM_MODALS_DESC</description>
+  <version>12.3.2</version>
+  <creationDate>March 2023</creationDate>
+  <author>Regular Labs (Peter van Westen)</author>
+  <authorEmail>info@regularlabs.com</authorEmail>
+  <authorUrl>https://regularlabs.com</authorUrl>
+  <copyright>Copyright © 2023 Regular Labs - All Rights Reserved</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <namespace path="src">RegularLabs\Plugin\System\Modals</namespace>
+  <scriptfile>script.install.php</scriptfile>
+  <files>
+    <file plugin="modals">modals.php</file>
+    <folder>language</folder>
+    <folder>src</folder>
+  </files>
+  <media folder="media" destination="modals">
+    <folder>css</folder>
+    <folder>js</folder>
+    <folder>scss</folder>
+  </media>
+  <config>
+    <fields name="params" addfieldprefix="RegularLabs\Library\Form\Field">
+      <fieldset name="basic">
+        <field name="@load_script_descriptions" type="LoadMedia" filetype="script" file="regularlabs.admin-form-descriptions"/>
+        <field name="@load_language_regularlabs" type="LoadLanguage" extension="plg_system_regularlabs"/>
+        <field name="@license" type="License" extension="MODALS"/>
+        <field name="@version" type="Version" extension="MODALS"/>
+        <field name="@header" type="Header" label="MODALS" description="MODALS_DESC" url="https://regularlabs.com/modals"/>
+      </fieldset>
+      <fieldset name="RL_STYLING">
+        <field name="theme" type="List" default="dark" class="w-auto" label="RL_THEME" description="RL_THEME_DESC" overridable="theme">
+          <option value="dark">MDL_THEME_DARK</option>
+          <option value="light">MDL_THEME_LIGHT</option>
+          <option value="custom">RL_CUSTOM</option>
+          <option disabled="disabled">---</option>
+          <option disabled="disabled">RL_ONLY_AVAILABLE_IN_PRO_LIST_OPTION</option>
+          <option disabled="disabled" value="dark-automatic">MDL_THEME_AUTOMATIC_DARK</option>
+          <option disabled="disabled" value="light-automatic">MDL_THEME_AUTOMATIC_LIGHT</option>
+          <option disabled="disabled" value="classic">MDL_THEME_CLASSIC</option>
+        </field>
+        <field name="@showon__theme_not_classic__a" type="ShowOn" value="theme!:classic"/>
+        <field name="@block__effects__a" type="Block" start="1" label="MDL_EFFECTS"/>
+        <field name="@effect_open" type="OnlyPro" label="MDL_EFFECT_OPEN" description="MDL_EFFECT_OPEN_DESC"/>
+        <field name="@effect_close" type="OnlyPro" label="MDL_EFFECT_CLOSE" description="MDL_EFFECT_CLOSE_DESC"/>
+        <field name="@effect_next" type="OnlyPro" label="MDL_EFFECT_NEXT" description="MDL_EFFECT_NEXT_DESC"/>
+        <field name="@effect_previous" type="OnlyPro" label="MDL_EFFECT_PREVIOUS" description="MDL_EFFECT_PREVIOUS_DESC"/>
+        <field name="@block__effects__b" type="Block" end="1"/>
+        <field name="@showon__theme_not_classic__b" type="ShowOn"/>
+        <field name="@block__dimensions__a" type="Block" start="1" label="MDL_DIMENSIONS"/>
+        <field name="@block__dimensions_content__a" type="Block" start="1" label="MDL_DIMENSIONS_CONTENT"/>
+        <field name="@dimensions_content" type="OnlyPro"/>
+        <!-- <<< [FREE] <<< -->
+        <field name="@block__dimensions_urls__a" type="Block" start="1" label="MDL_DIMENSIONS_URLS"/>
+        <field name="width_urls" type="Text" class="font-monospace text-right rl-w-8em" default="100%" label="RL_WIDTH" description="MDL_DIMENSION_DESC"/>
+        <field name="height_urls" type="Text" class="font-monospace text-right rl-w-8em" default="100%" label="RL_HEIGHT" description="MDL_DIMENSION_DESC"/>
+        <field name="@block__dimensions_urls__b" type="Block" end="1"/>
+        <field name="dimensions_include_title" type="Radio" layout="joomla.form.field.radio.switcher" default="0" label="MDL_DIMENSIONS_INCLUDE_TITLE" description="MDL_DIMENSIONS_INCLUDE_TITLE_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="@block__dimensions__b" type="Block" end="1"/>
+        <field name="@position" type="OnlyPro" label="MDL_POSITION" description="MDL_POSITION_DESC"/>
+        <field name="load_stylesheet" type="Radio" layout="joomla.form.field.radio.switcher" default="1" label="RL_LOAD_STYLESHEET" description="RL_LOAD_STYLESHEET_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+      </fieldset>
+      <fieldset name="RL_MEDIA">
+        <field name="@block__resize_images__a" type="Block" start="1" label="RL_RESIZE_IMAGES"/>
+        <field name="@resize_images" type="OnlyPro"/>
+        <field name="@block__resize_images__b" type="Block" end="1"/>
+        <field name="@block__auto_titles__a" type="Block" start="1" label="MDL_AUTO_TITLES"/>
+        <field name="auto_titles" type="Radio" layout="joomla.form.field.radio.switcher" default="1" label="MDL_AUTO_TITLES" description="MDL_AUTO_TITLES_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="title_case" type="List" default="titlecase" class="w-auto" label="MDL_CASE_TITLES" description="MDL_CASE_TITLES_DESC" showon="auto_titles:1">
+          <option value="0">JNONE</option>
+          <option value="lowercase">MDL_LOWERCASE</option>
+          <option value="uppercase">MDL_UPPERCASE</option>
+          <option value="uppercasefirst">MDL_UPPERCASE_FIRST</option>
+          <option value="titlecase">MDL_TITLECASE</option>
+          <option value="titlecase_smart">MDL_TITLECASE_SMART</option>
+        </field>
+        <field name="lowercase_words" type="Text" default="a,the,to,at,in,with,and,but,or" label="MDL_TITLECASE_LOWERCASE_WORDS" description="MDL_TITLECASE_LOWERCASE_WORDS_DESC" showon="auto_titles:1[AND]title_case:titlecase_smart"/>
+        <field name="@block__auto_titles__b" type="Block" end="1"/>
+        <field name="@block__galleries__a" type="Block" start="1" label="MDL_GALLERIES"/>
+        <field name="@galleries" type="OnlyPro"/>
+        <field name="@block__galleries__b" type="Block" end="1"/>
+        <field name="@block__groups__a" type="Block" start="1" label="MDL_GROUPS"/>
+        <field name="@groups" type="OnlyPro"/>
+        <field name="@block__groups__b" type="Block" end="1"/>
+        <field name="@block__slideshows__a" type="Block" start="1" label="MDL_SLIDESHOWS"/>
+        <field name="@slideshows" type="OnlyPro"/>
+        <field name="@block__slideshows__b" type="Block" end="1"/>
+        <field name="@block__media_settings__a" type="Block" start="1" label="MDL_MEDIA_SETTINGS"/>
+        <field name="@image_lazy_loading" type="OnlyPro" label="MDL_IMAGE_LAZY_LOADING" description="MDL_IMAGE_LAZY_LOADING_DESC"/>
+        <field name="mediafiles" type="Text" default="bmp,eps,gif,jpg,jpeg,pdf,png" class="font-monospace" label="MDL_MEDIA_FILES" description="MDL_MEDIA_FILES_DESC"/>
+        <field name="@block__media_settings__b" type="Block" end="1"/>
+      </fieldset>
+      <fieldset name="MDL_AUTOCONVERT">
+        <field name="@block__autoconvert__a" type="Block" start="1" label="MDL_LINKS"/>
+        <field name="@block__classnames__a" type="Block" start="1" label="MDL_CLASSNAMES"/>
+        <field name="autoconvert_classnames" type="Radio" layout="joomla.form.field.radio.switcher" default="1" label="MDL_AUTOCONVERT" description="MDL_AUTOCONVERT_CLASSNAMES_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="classnames" type="Text" size="80" class="input-xlarge" default="modal" label="MDL_CLASSNAMES" description="MDL_CLASSNAMES_DESC" showon="autoconvert_classnames:1"/>
+        <field name="@block__classnames__b" type="Block" end="1"/>
+        <field name="@block__external__a" type="Block" start="1" label="MDL_EXTERNAL_LINKS"/>
+        <field name="@external" type="OnlyPro" label="MDL_AUTOCONVERT" description="MDL_EXTERNAL_LINKS_DESC"/>
+        <field name="@block__external__b" type="Block" end="1"/>
+        <field name="@block__target__a" type="Block" start="1" label="MDL_TARGET"/>
+        <field name="@target" type="OnlyPro" label="MDL_AUTOCONVERT" description="MDL_TARGET_DESC"/>
+        <field name="@block__target__b" type="Block" end="1"/>
+        <field name="@block__filetypes__a" type="Block" start="1" label="MDL_FILETYPES"/>
+        <field name="@filetypes" type="OnlyPro" label="MDL_AUTOCONVERT" description="MDL_AUTOCONVERT_FILETYPES_DESC"/>
+        <field name="@block__filetypes__b" type="Block" end="1"/>
+        <field name="@block__urls__a" type="Block" start="1" label="RL_URL_PARTS"/>
+        <field name="@urls" type="OnlyPro" label="MDL_AUTOCONVERT" description="MDL_AUTOCONVERT_URLS_DESC"/>
+        <field name="@block__urls__b" type="Block" end="1"/>
+        <field name="exclude_urls" type="Textarea" cols="40" rows="5" default="" label="MDL_EXCLUDE_URLS" description="MDL_EXCLUDE_URLS_DESC" showon="autoconvert_classnames:1[OR]external:1[OR]target:1[OR]filetypes:1[OR]autoconvert_urls:1"/>
+        <field name="@block__autoconvert__b" type="Block" end="1"/>
+        <field name="@block__autoconvert_images__a" type="Block" start="1" label="MDL_IMAGES"/>
+        <field name="@image_autoconvert_images" type="OnlyPro" label="MDL_AUTOCONVERT" description="MDL_AUTOCONVERT_CLASSNAMES_IMAGES_DESC"/>
+        <field name="@block__autoconvert_images__b" type="Block" end="1"/>
+      </fieldset>
+      <fieldset name="RL_BEHAVIOUR">
+        <field name="keyboardnavigation" type="Radio" layout="joomla.form.field.radio.switcher" default="1" label="MDL_ENABLE_KEYBOARD_NAVIGATION" description="MDL_ENABLE_KEYBOARD_NAVIGATION_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="@showclosebutton" type="OnlyPro" label="MDL_SHOW_CLOSE_BUTTON" description="MDL_SHOW_CLOSE_BUTTON_DESC"/>
+        <field name="@closeonoutsideclick" type="OnlyPro" label="MDL_CLOSE_ON_OUTSIDE_CLICK" description="MDL_CLOSE_ON_OUTSIDE_CLICK_DESC"/>
+        <field name="@showcountdown" type="OnlyPro" label="MDL_SHOW_COUNTDOWN" description="MDL_SHOW_COUNTDOWN_DESC"/>
+        <field name="@pagination" type="OnlyPro" label="MDL_PAGINATION" description="MDL_PAGINATION_DESC"/>
+        <field name="@note__open_count_based_on" type="OnlyPro" label="MDL_OPEN_COUNT_BASED_ON" description="MDL_OPEN_COUNT_BASED_ON_DESC"/>
+      </fieldset>
+      <fieldset name="RL_SETTINGS_EDITOR_BUTTON">
+        <field name="button_text" type="Text" default="Modal" label="RL_BUTTON_TEXT" description="RL_BUTTON_TEXT_DESC"/>
+        <field name="enable_frontend" type="Radio" layout="joomla.form.field.radio.switcher" default="1" label="RL_ENABLE_IN_FRONTEND" description="RL_ENABLE_IN_FRONTEND_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+      </fieldset>
+      <fieldset name="RL_TAG_SYNTAX">
+        <field name="tag" type="Text" default="modal" label="MDL_TAG" description="MDL_TAG_DESC"/>
+        <field name="@tag_content" type="OnlyPro" label="MDL_CONTENT_TAG" description="MDL_CONTENT_TAG_DESC"/>
+        <field name="tag_characters" type="List" default="{.}" class="w-auto" label="RL_TAG_CHARACTERS" description="RL_TAG_CHARACTERS_DESC">
+          <option value="{.}">{...}</option>
+          <option value="[.]">[...]</option>
+          <option value="«.»">«...»</option>
+          <option value="{{.}}">{{...}}</option>
+          <option value="[[.]]">[[...]]</option>
+          <option value="[:.:]">[:...:]</option>
+          <option value="[%.%]">[%...%]</option>
+        </field>
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="sub_template" type="Text" default="component" label="MDL_SUB_TEMPLATE" description="MDL_SUB_TEMPLATE_DESC"/>
+        <field name="@note__disabled_components" type="OnlyPro" label="RL_DISABLE_ON_COMPONENTS" description="RL_DISABLE_ON_COMPONENTS_DESC"/>
+        <field name="enable_admin" type="Radio" layout="joomla.form.field.radio.switcher" default="0" label="RL_ENABLE_IN_ADMIN" description="RL_ENABLE_IN_ADMIN_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="place_comments" type="Radio" layout="joomla.form.field.radio.switcher" default="1" label="RL_PLACE_HTML_COMMENTS" description="RL_PLACE_HTML_COMMENTS_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="add_redirect" type="Radio" layout="joomla.form.field.radio.switcher" default="1" label="MDL_ADD_REDIRECT" description="MDL_ADD_REDIRECT_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

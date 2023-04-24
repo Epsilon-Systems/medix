@@ -1,0 +1,730 @@
+/* line 77, ../../../../../assets/util/stylesheets/sass/_loader.scss */
+.loader--side {
+  vertical-align: middle;
+  margin-left: 15px;
+  display: inline-block;
+}
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* line 2, ../../../../../assets/util/stylesheets/sass/_nobossmodal.scss */
+.modal-confirm-responsive {
+  width: 400px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  /* line 7, ../../../../../assets/util/stylesheets/sass/_nobossmodal.scss */
+  .modal-confirm-responsive {
+    width: auto;
+    margin: 10px;
+  }
+}
+/* line 22, ../sass/nobossmodal.scss */
+.loader--fullpage {
+  animation: circle 1.4s infinite linear;
+  transform: translateZ(0);
+  border-radius: 50%;
+  background: #fff;
+  background: linear-gradient(to right, #fff 10%, rgba(255, 255, 255, 0) 42%);
+  height: 65px;
+  width: 65px;
+  position: fixed;
+  top: calc(50% - 65px/2);
+  left: calc(50% - 65px/2);
+  z-index: 1035;
+}
+/* line 19, ../../../../../assets/util/stylesheets/sass/_loader.scss */
+.loader--fullpage:before {
+  width: 50%;
+  height: 50%;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  background: #fff;
+  display: block;
+}
+/* line 31, ../../../../../assets/util/stylesheets/sass/_loader.scss */
+.loader--fullpage:after {
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #999;
+  display: block;
+}
+
+/* line 32, ../sass/nobossmodal.scss */
+.loader-message {
+  position: fixed;
+  top: calc(60%);
+  z-index: 1035;
+  text-align: center;
+  background: #dff0d8;
+  left: calc(40%);
+  right: calc(40%);
+  color: #3c763d;
+  border-radius: 4%;
+  border: 1px solid #faebcc;
+  border-radius: 3px;
+}
+
+/* line 48, ../sass/nobossmodal.scss */
+.loader--side {
+  animation: circle 1.4s infinite linear;
+  transform: translateZ(0);
+  border-radius: 50%;
+  background: #787878;
+  background: linear-gradient(to right, #787878 10%, rgba(255, 255, 255, 0) 42%);
+  height: 20px;
+  width: 20px;
+}
+/* line 19, ../../../../../assets/util/stylesheets/sass/_loader.scss */
+.loader--side:before {
+  width: 50%;
+  height: 50%;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  background: #787878;
+  display: block;
+}
+/* line 31, ../../../../../assets/util/stylesheets/sass/_loader.scss */
+.loader--side:after {
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  display: block;
+}
+
+/* line 57, ../sass/nobossmodal.scss */
+.loader-fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* line 61, ../sass/nobossmodal.scss */
+body.modal--is-open {
+  overflow: hidden;
+}
+/* line 63, ../sass/nobossmodal.scss */
+body.modal--is-open .noboss-modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+  z-index: 1048;
+}
+
+/* line 71, ../sass/nobossmodal.scss */
+.noboss-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  outline: 0;
+}
+/* line 81, ../sass/nobossmodal.scss */
+.noboss-modal .alert {
+  word-break: break-word;
+}
+/* line 84, ../sass/nobossmodal.scss */
+.noboss-modal .fade .nb-modal-dialog {
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -25%);
+}
+/* line 95, ../sass/nobossmodal.scss */
+.noboss-modal .in .nb-modal-dialog {
+  transform: translate(0, 0);
+}
+/* line 101, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-dialog {
+  height: calc(100% - 7vh);
+  width: calc(50vw + 220px);
+  margin: 3.5vh auto;
+  border-radius: 10px;
+}
+/* line 107, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-content {
+  position: relative;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 10px;
+  outline: 0;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+      flex-flow: column;
+}
+/* line 119, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-header {
+  padding: 15px 20px;
+  position: relative;
+  margin-bottom: 7px;
+}
+/* line 127, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-header h2 {
+  color: #212529;
+  font-weight: 400;
+  font-size: 19px;
+  padding: 0px;
+  margin: 0px;
+}
+/* line 134, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-header .error {
+  background-color: #d9534f;
+}
+/* line 137, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-header .success {
+  background-color: #449d44;
+}
+/* line 140, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-header .info {
+  background-color: #6495ed;
+}
+/* line 143, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-header .error, .noboss-modal .nb-modal-header .success, .noboss-modal .nb-modal-header .info {
+  color: #fff;
+}
+/* line 145, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-header .error .btn-close, .noboss-modal .nb-modal-header .success .btn-close, .noboss-modal .nb-modal-header .info .btn-close {
+  color: white;
+}
+/* line 149, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-header .btn-close {
+  float: right;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  background: none;
+  border: none;
+  border-left: 0;
+  box-shadow: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+/* line 167, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-header .btn-close:hover, .noboss-modal .nb-modal-header .btn-close:focus {
+  color: #000;
+  text-decoration: none;
+  opacity: .75;
+}
+/* line 172, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-header .btn-close:focus {
+  outline: none;
+}
+/* line 177, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-body {
+  box-sizing: border-box;
+  padding: 10px 20px 20px;
+  width: 100%;
+  height: 82%;
+  -ms-flex: 2;
+      flex: 2;
+  /*sobrescrevendo estilo do template p/ nao aparecer scroll sempre*/
+  overflow-y: auto !important;
+}
+/* line 187, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-body:after, .noboss-modal .nb-modal-body:before {
+  box-sizing: inherit;
+}
+/* line 192, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-body .modal-tab-pane {
+  display: none;
+}
+/* line 194, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-body .modal-tab-pane.active {
+  display: -ms-grid;
+  display: grid;
+}
+/* line 199, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-footer {
+  text-align: right;
+  clear: both;
+  padding: 10px 15px;
+  margin-bottom: 0;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-radius: 0 0 6px 6px;
+  box-shadow: inset 0 1px 0 #fff;
+}
+/* line 209, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-footer .btn-reset {
+  float: left;
+}
+/* line 213, ../sass/nobossmodal.scss */
+.noboss-modal .nb-modal-footer [data-id=button-confirm] {
+  margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+  /* line 221, ../sass/nobossmodal.scss */
+  .noboss-modal .nb-modal-dialog {
+    margin: 0;
+    height: 100%;
+    width: auto;
+  }
+  /* line 226, ../sass/nobossmodal.scss */
+  .noboss-modal .nb-modal-header, .noboss-modal .nb-modal-content, .noboss-modal .nb-modal-footer {
+    border-radius: unset;
+  }
+  /* line 229, ../sass/nobossmodal.scss */
+  .noboss-modal div.modal.fade.in {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+/* line 241, ../sass/nobossmodal.scss */
+#attrib-theme .controls .btn[disabled]:hover, #attrib-theme .controls .btn[disabled]:focus {
+  background: #f3f3f3;
+  color: #333;
+  outline: initial;
+}
+
+/* line 251, ../sass/nobossmodal.scss */
+#wrapper #content [data-id="noboss-modal"].btn-nb:not(.disabled) {
+  background: #fff;
+  padding: 0 1rem;
+  line-height: 2.8rem;
+  border-color: #adb5bd;
+  border-radius: 0.25rem !important;
+}
+/* line 258, ../sass/nobossmodal.scss */
+#wrapper #content [data-id="noboss-modal"].btn-nb:not(.disabled).btn-primary {
+  color: #ffffff;
+  background-color: #2a69b8;
+  border-color: #2a69b8;
+}
+/* line 264, ../sass/nobossmodal.scss */
+#wrapper #content [data-id="noboss-modal"].btn-nb:not([disabled]):hover {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #1f3047;
+  border-color: #1f3047;
+}
+/* line 272, ../sass/nobossmodal.scss */
+#wrapper #content .noboss-modal .nb-modal-body .modal-tab-pane {
+  padding-top: 15px;
+}
+/* line 277, ../sass/nobossmodal.scss */
+#wrapper #content .noboss-modal .nb-modal-footer .btn-nb:not(.disabled) {
+  line-height: 2.4rem;
+}
+/* line 282, ../sass/nobossmodal.scss */
+#wrapper #content .noboss-modal .control-group {
+  display: inherit;
+}
+/* line 286, ../sass/nobossmodal.scss */
+#wrapper #content .control-group.hidden {
+  display: none;
+}
+
+/* line 4, ../sass/nobosstheme.scss */
+div[data-id="noboss-modal--theme-selected"] {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+/* line 9, ../sass/nobosstheme.scss */
+.noboss-modal--theme {
+  z-index: 2000;
+}
+/* line 12, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-dialog {
+  margin: auto !important;
+  max-width: 1130px;
+  max-height: 700px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 24, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 20px 30px;
+  height: 100%;
+}
+/* line 31, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+/* line 36, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper {
+  width: 35%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-right: 1%;
+  height: 100%;
+  float: left;
+}
+/* line 44, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar {
+  display: table;
+  width: 100%;
+  padding-top: 5px;
+  padding-left: 5px;
+  transform: translateX(-5px);
+  padding-bottom: 2%;
+}
+/* line 53, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option {
+  height: 100%;
+  padding: 0 10px 0 3px;
+}
+/* line 56, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option:not(:last-child) {
+  margin-bottom: 20px;
+}
+/* line 60, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .theme-name {
+  padding: 10px;
+  margin-bottom: 15px;
+  color: #2384d3;
+  position: relative;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+/* line 67, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .theme-name:hover {
+  background-color: #eeeeee;
+  cursor: pointer;
+}
+/* line 72, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .theme-name p {
+  font-size: 14px;
+  margin: 0;
+  width: 91%;
+  display: inline-block;
+}
+/* line 79, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .theme-name i {
+  font-weight: 900;
+  font-size: 16px;
+}
+/* line 85, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list {
+  list-style: none;
+  margin: 0;
+  overflow: initial;
+  padding: 0;
+}
+/* line 91, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list .sample-option {
+  box-sizing: border-box;
+  cursor: pointer;
+}
+/* line 95, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list .sample-option .image-wrapper {
+  position: relative;
+  box-shadow: 0px 0px 5px 0px rgba(113, 113, 113, 0.75);
+}
+/* line 98, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list .sample-option .image-wrapper .theme-name--mobile {
+  display: none;
+}
+/* line 101, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list .sample-option .image-wrapper .sample-img {
+  width: 100%;
+  -webkit-transform: translateZ(0);
+  transition: opacity .3s linear;
+  opacity: .7;
+}
+/* line 110, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list .sample-option .image-wrapper i {
+  display: none;
+}
+/* line 117, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list .sample-option.blocked .image-wrapper i {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 25px;
+  color: #f0f0f0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 7px 12px;
+  border-radius: 5px;
+  margin: 10px;
+}
+@media (max-width: 600px) {
+  /* line 130, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list .sample-option.blocked .image-wrapper i {
+    bottom: 24px;
+  }
+}
+/* line 139, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list .sample-option.selected .image-wrapper .sample-img {
+  opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 45px, rgba(0, 0, 0, 0.22) 0px 10px 18px;
+}
+/* line 149, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list.sample-list--column .sample-option {
+  margin-bottom: 10px;
+}
+/* line 154, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list.sample-list--grid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: center;
+      align-items: center;
+}
+/* line 162, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list.sample-list--grid .sample-option {
+  -ms-flex: 1;
+      flex: 1;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding: 4px;
+}
+/* line 172, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .selected-theme {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background-color: #f2f2f2;
+  height: 100%;
+  justify-content: center;
+  -ms-flex: 1;
+      flex: 1;
+}
+/* line 173, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .selected-theme *, .noboss-modal--theme .nb-modal-body .wrapper .selected-theme *::after, .noboss-modal--theme .nb-modal-body .wrapper .selected-theme *::before {
+  box-sizing: border-box;
+}
+/* line 183, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .selected-theme .image-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  max-width: 100%;
+  width: 100%;
+}
+/* line 189, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .selected-theme .image-wrapper [data-id=selected-theme-img] {
+  width: 100%;
+}
+/* line 192, ../sass/nobosstheme.scss */
+.noboss-modal--theme .nb-modal-body .wrapper .selected-theme .image-wrapper .sample-img {
+  display: table;
+  margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 203, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-dialog {
+    width: calc(70vw + 220px);
+  }
+}
+@media (max-width: 600px) {
+  /* line 210, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-dialog {
+    max-height: initial;
+  }
+  /* line 213, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-body {
+    padding: 10px 5px;
+  }
+  /* line 215, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-body .notification {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    right: 0;
+    font-size: 15px;
+    height: auto;
+    padding: 15px 15px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.87);
+    margin: 0;
+    border: none;
+    border-radius: unset;
+  }
+  /* line 233, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper {
+    width: 100%;
+  }
+  /* line 235, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar {
+    overflow: initial;
+    -ms-flex: 1;
+        flex: 1;
+  }
+  /* line 238, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option {
+    padding: 0px;
+  }
+  /* line 240, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option:not(:last-child) {
+    margin-bottom: 0;
+  }
+  /* line 243, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .theme-name {
+    display: none;
+  }
+  /* line 247, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list .sample-option {
+    margin-bottom: 15px;
+    padding: 0;
+    position: relative;
+  }
+  /* line 253, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list .sample-option.selected::before {
+    content: "\f05d";
+    font-family: FontAwesome;
+    position: absolute;
+    font-size: 35px;
+    color: #ffffff;
+    text-shadow: 0 0 10px black;
+    display: -ms-flexbox;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    -ms-flex-align: center;
+        align-items: center;
+    border-radius: 10px;
+    z-index: 2;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  /* line 275, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list .sample-option .image-wrapper .theme-name--mobile {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #e8e8e8;
+    background-color: rgba(12, 12, 12, 0.85);
+    padding: 5px 10px;
+    z-index: 1;
+  }
+  /* line 289, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list .sample-option .image-wrapper .sample-img {
+    opacity: 1;
+  }
+  /* line 296, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list .sample-option.blocked .image-wrapper:after {
+    z-index: 2;
+    background-color: initial;
+    margin: 0;
+  }
+  /* line 306, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list.sample-list--column .sample-option {
+    margin-bottom: 15px;
+  }
+  /* line 311, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list.sample-list--grid {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  /* line 313, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-body .wrapper .nbsidebar-wrapper .nbsidebar .theme-option .sample-list.sample-list--grid .sample-option {
+    padding: 0;
+  }
+  /* line 322, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-body .wrapper .selected-theme {
+    -ms-flex: 0;
+        flex: 0;
+  }
+  /* line 328, ../sass/nobosstheme.scss */
+  .noboss-modal--theme .nb-modal-footer {
+    display: none;
+  }
+}
+@media only screen and (min-width: 991px) {
+  /* line 336, ../sass/nobosstheme.scss */
+  .noboss-modal.in .nb-modal-dialog {
+    top: 0 !important;
+  }
+}
+/* line 343, ../sass/nobosstheme.scss */
+#wrapper #content .noboss-theme-select {
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 345, ../sass/nobosstheme.scss */
+#wrapper #content .noboss-theme-select input {
+  -ms-flex: 2;
+      flex: 2;
+}
+/* line 352, ../sass/nobosstheme.scss */
+#wrapper #content .noboss-modal .nb-modal-header .btn-close {
+  display: block;
+  padding: 7px 4px;
+  top: 3px;
+}
+/* line 364, ../sass/nobosstheme.scss */
+#wrapper #content .noboss-modal--theme .nb-modal-body .wrapper .sample-list .sample-option.blocked .image-wrapper i {
+  font-size: 20px;
+}
+@media (max-width: 600px) {
+  /* line 376, ../sass/nobosstheme.scss */
+  #wrapper #content .noboss-modal--theme .nb-modal-body .wrapper .sample-list .sample-option.selected::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f058";
+  }
+}

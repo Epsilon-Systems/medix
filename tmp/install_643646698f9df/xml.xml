@@ -1,0 +1,22 @@
+<updates>
+    <update>
+        <name>PKG_NOBOSS</name>
+        <version>1.0.0</version>
+        <element>pkg_noboss</element>
+        <type>package</type>
+        <infourl title="No Boss Extensions">https://www.nobossextensions.com</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">https://www.nobossextensions.com</downloadurl>
+        </downloads>
+        <client>0</client>
+        <tags>
+            <tag>stable</tag>
+        </tags>
+        <maintainer><![CDATA[ No Boss Technology ]]></maintainer>
+        <maintainerurl>https://www.nobossextensions.com</maintainerurl>
+        <targetplatform name="joomla" version="((3.[789])|(4))"/>
+        <php_minimum>5.5</php_minimum>
+        <supported_databases mysql="5.5.3"/>
+        <folder/>
+    </update>
+</updates>

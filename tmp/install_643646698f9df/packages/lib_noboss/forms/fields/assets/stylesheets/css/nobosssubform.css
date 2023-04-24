@@ -1,0 +1,439 @@
+/* line 77, ../../../../../assets/util/stylesheets/sass/_loader.scss */
+.loader--side {
+  vertical-align: middle;
+  margin-left: 15px;
+  display: inline-block;
+}
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* line 5, ../sass/nobosssubform.scss */
+.js-editor-tinymce {
+  margin-top: 30px;
+}
+
+/* line 9, ../sass/nobosssubform.scss */
+.form-horizontal .controls {
+  margin-left: 0 !important;
+}
+
+/* line 13, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper], [data-subform-single-wrapper] {
+  position: relative;
+}
+
+/* line 17, ../sass/nobosssubform.scss */
+.clear-fix {
+  clear: both;
+}
+
+/* line 21, ../sass/nobosssubform.scss */
+#attrib-items {
+  position: relative;
+}
+
+/* line 27, ../sass/nobosssubform.scss */
+.subform-layout .control-label b {
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* line 35, ../sass/nobosssubform.scss */
+.control-group {
+  clear: both;
+}
+
+/* line 39, ../sass/nobosssubform.scss */
+.control-label.subform-label--invisible {
+  height: 0;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+/* line 45, ../sass/nobosssubform.scss */
+.control-label.subform-label--visible {
+  width: 100% !important;
+  margin-bottom: 30px;
+  display: block !important;
+  float: unset !important;
+}
+/* line 51, ../sass/nobosssubform.scss */
+.control-label.subform-label--visible + .controls {
+  margin-left: 0;
+}
+/* line 56, ../sass/nobosssubform.scss */
+.control-label.subform-label--visible > .subform-repeatable-wrapper .subform-repeatable > :first-child {
+  margin-bottom: 28px !important;
+}
+
+/* line 63, ../sass/nobosssubform.scss */
+.subform-repeatable-group > .btn-toolbar .btn.btn-primary .icon-move:before {
+  display: none;
+}
+/* line 66, ../sass/nobosssubform.scss */
+.subform-repeatable-group > .btn-toolbar .btn.btn-primary .icon-move:after {
+  content: '\f047';
+  font-family: 'FontAwesome';
+}
+
+/* line 73, ../sass/nobosssubform.scss */
+[data-subform-single-wrapper] .noboss-subform-single {
+  position: relative;
+}
+/* line 76, ../sass/nobosssubform.scss */
+[data-subform-single-wrapper] .controls {
+  margin-left: 0 !important;
+}
+
+/* line 82, ../sass/nobosssubform.scss */
+[data-subform-single-wrapper] .noboss-subform-single {
+  margin-top: 20px;
+}
+
+/* line 88, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .btn-toolbar:first-child {
+  margin: 0;
+}
+/* line 90, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .btn-toolbar:first-child .btn-group {
+  display: block;
+  width: 100%;
+}
+/* line 93, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .btn-toolbar:first-child .btn-group .subform-btn-extras {
+  right: 0;
+  position: absolute;
+  margin: 0;
+  display: inline-block;
+}
+/* line 98, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .btn-toolbar:first-child .btn-group .subform-btn-extras a {
+  margin: 0 0 0 10px;
+}
+/* line 106, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-wrapper .subform-repeatable > :first-child {
+  position: relative !important;
+}
+/* line 118, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable > .btn-toolbar .btn {
+  border-radius: 0.25rem !important;
+}
+/* line 121, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable > .btn-toolbar .group-add {
+  margin-left: 0;
+  max-width: 48px;
+}
+/* line 126, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group {
+  border-color: #2a69b8 !important;
+  padding-top: 0px !important;
+  margin: 20px 0 0 0;
+  border: 1px solid #ccc;
+  padding: 0;
+  border-radius: 3px;
+}
+/* line 134, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group .noboss-collapse {
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 137, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group .noboss-collapse .noboss-collapse--wrapper {
+  -ms-flex: 3;
+      flex: 3;
+  min-height: 40px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 100%;
+  padding-left: 25px;
+}
+/* line 145, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group .noboss-collapse .noboss-collapse--wrapper .noboss-collapse__title {
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* line 156, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group .nb-suform__fields {
+  padding: 20px 25px 0;
+}
+/* line 160, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group .btn-toolbar {
+  margin: 0;
+}
+/* line 163, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group .btn-toolbar .btn-group {
+  vertical-align: text-top;
+}
+/* line 167, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group .btn-toolbar .btn {
+  font-size: 13px;
+  line-height: 29px;
+  background-color: #f3f3f300;
+  position: initial;
+  border: unset;
+  padding: 0.6em 14px !important;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: none;
+  min-width: 0;
+}
+/* line 179, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group .btn-toolbar .btn:hover {
+  background-color: #e0dede;
+  opacity: 0.9;
+}
+/* line 183, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group .btn-toolbar .btn.btn-danger span::before {
+  color: #942a25;
+}
+/* line 186, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group .btn-toolbar .btn.btn-success span::before {
+  color: #378137;
+}
+/* line 189, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group .btn-toolbar .btn.btn-move span::before, [data-subform-collapse-wrapper] .subform-repeatable-group .btn-toolbar .btn.btn-duplicate span::before {
+  color: #333;
+}
+/* line 196, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group.shrink {
+  padding-bottom: 0;
+}
+/* line 200, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group .noboss-collapse {
+  box-sizing: border-box;
+  background-color: inherit;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+/* line 206, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group .noboss-collapse:hover {
+  background-color: rgba(102, 139, 169, 0.12);
+}
+/* line 210, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group .noboss-collapse .noboss-collapse__icon {
+  margin-right: 25px;
+  font-size: 2em;
+}
+/* line 214, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group .noboss-collapse .noboss-collapse__title {
+  font-weight: bold;
+}
+/* line 217, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .subform-repeatable-group .noboss-collapse .noboss-collapse__title, [data-subform-collapse-wrapper] .subform-repeatable-group .noboss-collapse .noboss-collapse__icon {
+  color: #2384d3;
+}
+/* line 223, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .btn-toolbar .btn-group a {
+  margin-right: 10px;
+}
+@media (min-width: 1080px) {
+  /* line 230, ../sass/nobosssubform.scss */
+  [data-subform-collapse-wrapper] .noboss-collapse .noboss-collapse--wrapper .noboss-collapse__title {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  /* line 238, ../sass/nobosssubform.scss */
+  [data-subform-collapse-wrapper] .subform-repeatable {
+    padding-right: 0;
+  }
+  /* line 241, ../sass/nobosssubform.scss */
+  [data-subform-collapse-wrapper] .btn-group .btn {
+    min-width: auto !important;
+  }
+  /* line 245, ../sass/nobosssubform.scss */
+  [data-subform-collapse-wrapper] .subform-repeatable-group .noboss-collapse {
+    padding-left: 10px;
+  }
+  /* line 247, ../sass/nobosssubform.scss */
+  [data-subform-collapse-wrapper] .subform-repeatable-group .noboss-collapse .noboss-collapse--wrapper {
+    padding: 0;
+  }
+  /* line 249, ../sass/nobosssubform.scss */
+  [data-subform-collapse-wrapper] .subform-repeatable-group .noboss-collapse .noboss-collapse--wrapper .noboss-collapse__icon {
+    margin: 0 5px 0 0;
+  }
+  /* line 252, ../sass/nobosssubform.scss */
+  [data-subform-collapse-wrapper] .subform-repeatable-group .noboss-collapse .noboss-collapse--wrapper .noboss-collapse__title {
+    white-space: unset;
+    font-size: 14px;
+  }
+  /* line 259, ../sass/nobosssubform.scss */
+  [data-subform-collapse-wrapper] .subform-repeatable-group .btn-toolbar .btn {
+    padding: 0.6em 8px !important;
+  }
+  /* line 263, ../sass/nobosssubform.scss */
+  [data-subform-collapse-wrapper] .subform-repeatable-group .nb-suform__fields {
+    padding: 10px 15px 0;
+  }
+  /* line 268, ../sass/nobosssubform.scss */
+  [data-subform-collapse-wrapper] .btn-toolbar:first-child .btn-group {
+    text-align: center;
+  }
+  /* line 270, ../sass/nobosssubform.scss */
+  [data-subform-collapse-wrapper] .btn-toolbar:first-child .btn-group span.noboss-collapse-button__text {
+    display: none;
+  }
+  /* line 273, ../sass/nobosssubform.scss */
+  [data-subform-collapse-wrapper] .btn-toolbar:first-child .btn-group span.material-icon {
+    margin: 0;
+  }
+  /* line 276, ../sass/nobosssubform.scss */
+  [data-subform-collapse-wrapper] .btn-toolbar:first-child .btn-group .subform-btn-extras {
+    position: relative;
+    display: block;
+  }
+  /* line 280, ../sass/nobosssubform.scss */
+  [data-subform-collapse-wrapper] .btn-toolbar:first-child .btn-group a, [data-subform-collapse-wrapper] .btn-toolbar:first-child .btn-group .subform-btn-extras a {
+    margin: 7px 5px 0 0;
+  }
+}
+/* line 286, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .rotate-icon {
+  transform: rotate(180deg);
+}
+/* line 290, ../sass/nobosssubform.scss */
+[data-subform-collapse-wrapper] .material-icon {
+  font-family: Material Icons;
+  font-size: 1.25em;
+  margin-right: 5px;
+  font-feature-settings: 'liga';
+  display: block;
+  float: left;
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 305, ../sass/nobosssubform.scss */
+  .nb-editor {
+    clear: both;
+  }
+
+  /* line 313, ../sass/nobosssubform.scss */
+  #wrapper #content .subform-repeatable .table.table-responsive .control-group .controls {
+    min-width: 250px;
+  }
+  /* line 316, ../sass/nobosssubform.scss */
+  #wrapper #content .subform-repeatable .table.table-responsive .control-label.sr-only {
+    position: relative;
+    height: auto;
+    margin: auto;
+    overflow: auto;
+  }
+  /* line 322, ../sass/nobosssubform.scss */
+  #wrapper #content .subform-repeatable .table.table-responsive .subform-repeatable-group > td {
+    display: contents;
+  }
+  /* line 325, ../sass/nobosssubform.scss */
+  #wrapper #content .subform-repeatable .table.table-responsive tr.subform-repeatable-group {
+    margin-bottom: 20px;
+    padding: 6px;
+    display: block;
+  }
+  /* line 330, ../sass/nobosssubform.scss */
+  #wrapper #content .subform-repeatable .table.table-responsive > thead > tr {
+    margin: 0;
+  }
+  /* line 333, ../sass/nobosssubform.scss */
+  #wrapper #content .subform-repeatable .table.table-responsive > thead > tr > th {
+    display: none;
+  }
+  /* line 336, ../sass/nobosssubform.scss */
+  #wrapper #content .subform-repeatable .table.table-responsive > thead > tr > td {
+    padding: 0 7px;
+  }
+
+  /* line 346, ../sass/nobosssubform.scss */
+  #content .row-fluid .subform-table-layout .subform-repeatable-group > td {
+    padding-left: 150px;
+  }
+  /* line 349, ../sass/nobosssubform.scss */
+  #content .row-fluid .subform-table-layout .field-calendar input,
+  #content .row-fluid .subform-table-layout .clockpicker input {
+    width: 110px;
+  }
+  /* line 353, ../sass/nobosssubform.scss */
+  #content .row-fluid .subform-table-layout .minicolors input {
+    width: 120px;
+  }
+  /* line 361, ../sass/nobosssubform.scss */
+  #content .row-fluid .subform-layout .subform-table-layout .subform-repeatable-group > td {
+    padding-left: 130px;
+  }
+}
+/* line 380, ../sass/nobosssubform.scss */
+.loader--fullpage {
+  animation: circle 1.4s infinite linear;
+  transform: translateZ(0);
+  border-radius: 50%;
+  background: #fff;
+  background: linear-gradient(to right, #fff 10%, rgba(255, 255, 255, 0) 42%);
+  height: 65px;
+  width: 65px;
+  position: fixed;
+  top: calc(50% - 65px/2);
+  left: calc(50% - 65px/2);
+  z-index: 1035;
+}
+/* line 19, ../../../../../assets/util/stylesheets/sass/_loader.scss */
+.loader--fullpage:before {
+  width: 50%;
+  height: 50%;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  background: #fff;
+  display: block;
+}
+/* line 31, ../../../../../assets/util/stylesheets/sass/_loader.scss */
+.loader--fullpage:after {
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #999;
+  display: block;
+}
+
+/* line 390, ../sass/nobosssubform.scss */
+.loader-fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* line 393, ../sass/nobosssubform.scss */
+.loader-message {
+  position: fixed;
+  top: calc(60%);
+  z-index: 1035;
+  text-align: center;
+  background: #dff0d8;
+  left: calc(40%);
+  right: calc(40%);
+  color: #3c763d;
+  border-radius: 4%;
+  border: 1px solid #faebcc;
+  border-radius: 3px;
+}

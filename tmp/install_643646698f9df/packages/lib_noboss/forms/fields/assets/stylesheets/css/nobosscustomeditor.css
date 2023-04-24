@@ -1,0 +1,27 @@
+/* line 1, ../sass/nobosscustomeditor.scss */
+textarea.nb-custom-editor,
+textarea.nb-custom-editor:focus {
+  background: url(http://i.imgur.com/2cOaJ.png), #2b2a2a;
+  background-attachment: local;
+  background-repeat: no-repeat;
+  padding-left: 35px;
+  padding-top: 10px;
+  border-color: #ccc;
+  width: 50% !important;
+  -moz-tab-size: 4;
+       tab-size: 4;
+  color: #fff;
+}
+
+/* line 16, ../sass/nobosscustomeditor.scss */
+#wrapper #content textarea.nb-custom-editor,
+#wrapper #content textarea.nb-custom-editor:focus {
+  font-size: 14px;
+  width: 100% !important;
+}
+
+/* line 27, ../sass/nobosscustomeditor.scss */
+#content .row-fluid .fields_block textarea.nb-custom-editor,
+#content .row-fluid .fields_block textarea.nb-custom-editor:focus {
+  width: 90% !important;
+}

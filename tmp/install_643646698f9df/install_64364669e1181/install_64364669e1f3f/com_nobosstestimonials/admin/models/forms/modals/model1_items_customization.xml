@@ -1,0 +1,910 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form label="NOBOSS_EXTENSIONS_MODAL_INNER_ITEMS_CUSTOMIZATION_LABEL" extension="com_nobosstestimonials" admin="true">
+    <fieldset name="basic" addfieldpath="libraries/noboss/forms/fields" label="NOBOSS_EXTENSIONS_MODAL_ITEMS_CUSTOMIZATION_BASIC_TAB"> 
+        <field
+            type="note"
+            label="COM_NOBOSSTESTIMONIALS_QUOTES_NOTE_LABEL"
+        />
+
+        <field
+            name="show_quotes"
+            type="nobossradio"
+            class="btn-group btn-group-yesno"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_DISPLAY_LABEL"
+            description="COM_NOBOSSTESTIMONIALS_SHOW_QUOTES_DESCRIPTION_DESC"
+            default="0">
+            <option value="0">JNO</option>
+			<option value="1">JYES</option>
+        </field>
+
+        <field
+            name="quote_note_option1"
+            type="note"
+            showon="show_quotes:1"
+            label="COM_NOBOSSTESTIMONIALS_QUOTE_NOTE_OPT_LABEL"
+            description="COM_NOBOSSTESTIMONIALS_QUOTE_NOTE_OPT1"
+        />
+
+        <field
+            name="quotes_icon_size"
+            type="nobossrange"
+            min="0"
+            max="200"
+            step="1"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SIZE_LABEL"
+            description="NOBOSS_EXTENSIONS_ICONS_SIZE_DESC"
+            size="10"
+            maxlength="5"
+            showon="show_quotes:1"
+        />
+
+        <field
+            name="quotes_color"
+            type="color"
+            format="rgba"
+            position="bottom"
+            label="NOBOSS_EXTENSIONS_COLORS_COLOR_LABEL"
+            description="NOBOSS_EXTENSIONS_ICONS_COLOR_DESC"
+            showon="show_quotes:1"
+        />
+        
+    </fieldset>
+
+    <fieldset name="testimonials" label="COM_NOBOSSTESTIMONIALS_TESTIMONIALS_TAB_LABEL"> 
+     
+        <field 
+            name="testimonial_text_font"
+            type="nobossfontlist"
+            label="LIB_NOBOSS_FIELD_NOBOSSFONTLIST_FONT_LABEL"
+            
+            defaultfont="Roboto_Regular.ttf"
+            defaultfontstyle="Light"
+        />
+        
+        <field
+            name="testimonial_text_tag_html"
+            type="list"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_DESC"
+            default="p">
+            <option value="h1">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_1</option>
+            <option value="h2">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_2</option>
+            <option value="h3">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_3</option>
+            <option value="h4">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_4</option>
+            <option value="h5">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_5</option>
+            <option value="p">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_6</option>
+            <option value="span">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_7</option>
+            <option value="div">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_8</option>
+        </field>
+
+        <field
+            name="testimonial_text_alignment"
+            type="list"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_DESC"
+            default="center">
+            <option value="left">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_OPT_LEFT</option>
+            <option value="center">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_OPT_CENTER</option>
+            <option value="right">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_OPT_RIGHT</option>
+        </field>
+
+        <field
+            name="testimonial_text_transform"
+            type="list"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_TEXT_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_TEXT_DESC"
+            default="none">
+            <option value="capitalize">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_CAPITALIZE</option>
+            <option value="lowercase">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_LOWERCASE</option>
+            <option value="none">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_NONE</option>
+            <option value="uppercase">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_UPPERCASE</option>
+        </field>
+
+        <field
+            name="testimonial_text_size"
+            type="nobossrange"
+            min="0"
+            max="100"
+            step="1"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_SIZE_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_SIZE_DESC"
+            size="10"
+            maxlength="5"
+            default="28"
+        />
+
+        <field
+            name="testimonial_text_size_mobile"
+            type="nobossrange"
+            min="0"
+            max="50"
+            step="1"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_SIZE_MOBILE_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_SIZE_MOBILE_DESC"
+            size="10"
+            maxlength="5"
+            default="25"
+        />
+
+        <field
+            name="testimonial_text_space"
+            type="nobossmultipleinputs"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_LABEL"
+            description="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_DESC"
+            unit="px">
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_ABOVE"
+                type="text"
+                default="10"
+            />
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_SIDES"
+                type="text"
+                default="0"
+            />
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_BELOW"
+                type="text"
+                default="10"
+            />
+        </field>
+
+        <field
+            name="testimonial_text_color"
+            type="color"
+            format="rgba"
+            position="bottom"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_COLOR_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_COLOR_DESC"
+        />
+    </fieldset>
+
+    <fieldset name="personal_data" label="COM_NOBOSSTESTIMONIALS_PERSONAL_DATA_TAB_LABEL" nbshowon="display_field_personal_data_show_section:1">
+        <field
+            type="note"
+            label="COM_NOBOSSTESTIMONIALS_TESTIMONIAL_AUTHOR_NOTE_LABEL"
+        />
+       
+        <field 
+            name="testimonial_author_font"
+            type="nobossfontlist"
+            label="LIB_NOBOSS_FIELD_NOBOSSFONTLIST_FONT_LABEL"
+            
+            defaultfont="Roboto_Regular.ttf"
+            defaultfontstyle="Bold"
+        />
+        
+        <field
+            name="testimonial_author_tag_html"
+            type="list"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_DESC"
+            default="span">
+            <option value="h1">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_1</option>
+            <option value="h2">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_2</option>
+            <option value="h3">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_3</option>
+            <option value="h4">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_4</option>
+            <option value="h5">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_5</option>
+            <option value="p">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_6</option>
+            <option value="span">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_7</option>
+            <option value="div">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_8</option>
+        </field>
+
+        <field
+            name="testimonial_author_alignment"
+            type="list"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_DESC"
+            default="center">
+            <option value="left">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_OPT_LEFT</option>
+            <option value="center">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_OPT_CENTER</option>
+            <option value="right">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_OPT_RIGHT</option>
+        </field>
+
+        <field
+            name="testimonial_author_transform"
+            type="list"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_TEXT_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_TEXT_DESC"
+            default="none">
+            <option value="capitalize">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_CAPITALIZE</option>
+            <option value="lowercase">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_LOWERCASE</option>
+            <option value="none">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_NONE</option>
+            <option value="uppercase">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_UPPERCASE</option>
+        </field>
+
+        <field
+            name="testimonial_author_size"
+            type="nobossrange"
+            min="0"
+            max="100"
+            step="1"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_SIZE_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_SIZE_DESC"
+            size="10"
+            maxlength="5"
+            default="20"
+        />
+
+        <field
+            name="testimonial_author_space"
+            type="nobossmultipleinputs"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_LABEL"
+            description="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_DESC"
+            unit="px" >
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_ABOVE"
+                type="text"
+                default="0"
+            />
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_BELOW"
+                type="text"
+                default="0"
+            />
+        </field>
+
+        <field
+            name="testimonial_author_color"
+            type="color"
+            format="rgba"
+            position="bottom"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_COLOR_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_COLOR_DESC"
+        />
+
+        <field
+            type="note"
+            label="COM_NOBOSSTESTIMONIALS_TESTIMONIAL_IMAGE_NOTE_LABEL"
+        />
+
+        <field
+            name="show_rounded_image"
+            type="nobossradio"
+            class="btn-group btn-group-yesno"
+            label="COM_NOBOSSTESTIMONIALS_SHOW_ROUNDED_IMAGE_LABEL"
+            description="COM_NOBOSSTESTIMONIALS_SHOW_ROUNDED_IMAGE_DESC"
+            default="1">
+            <option value="0">JNO</option>
+			<option value="1">JYES</option>
+        </field>
+
+        <field
+            name="image_position"
+            type="list"
+            label="COM_NOBOSSTESTIMONIALS_TESTIMONIAL_IMAGE_POSITION_LABEL"
+            description="COM_NOBOSSTESTIMONIALS_TESTIMONIAL_IMAGE_POSITION_DESC"
+            default="top">
+            <option value="top">NOBOSS_EXTENSIONS_GLOBAL_FIELD_POSITION_TOP</option>
+            <option value="bottom">NOBOSS_EXTENSIONS_GLOBAL_FIELD_POSITION_BOTTOM</option>
+            <option value="left">NOBOSS_EXTENSIONS_GLOBAL_FIELD_POSITION_LEFT</option>
+            <option value="right">NOBOSS_EXTENSIONS_GLOBAL_FIELD_POSITION_RIGHT</option>
+        </field>
+      
+        <field
+            name="image_width"
+            type="number"
+            min="0"
+            max="999.99"
+            step="1"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_WIDTH_PX_LABEL"
+            description="COM_NOBOSSTESTIMONIALS_IMAGE_WIDTH_DESC"
+            size="10"
+            maxlength="5"
+            default="100"
+        />
+
+        <field
+            name="image_height"
+            type="number"
+            min="0"
+            max="999.99"
+            step="1"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_HEIGHT_PX_LABEL"
+            description="COM_NOBOSSTESTIMONIALS_IMAGE_HEIGHT_DESC"
+            size="10"
+            maxlength="5"
+            default="100"
+        />
+
+        <field
+            type="note"
+            label="COM_NOBOSSTESTIMONIALS_PERSONAL_DATA_TAB_LABEL"
+        /> 
+
+        <field 
+            name="personal_data_font"
+            type="nobossfontlist"
+            label="LIB_NOBOSS_FIELD_NOBOSSFONTLIST_FONT_LABEL"
+            
+            defaultfont="Roboto_Regular.ttf"
+            defaultfontstyle="Regular"
+        />    
+
+        <field
+            name="personal_data_tag_html"
+            type="list"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_DESC"
+            default="span">
+            <option value="h1">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_1</option>
+            <option value="h2">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_2</option>
+            <option value="h3">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_3</option>
+            <option value="h4">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_4</option>
+            <option value="h5">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_5</option>
+            <option value="p">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_6</option>
+            <option value="span">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_7</option>
+            <option value="div">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_8</option>
+        </field>
+
+        <field
+            name="personal_data_alignment"
+            type="list"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_DESC"
+            default="center">
+            <option value="left">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_OPT_LEFT</option>
+            <option value="center">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_OPT_CENTER</option>
+            <option value="right">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_OPT_RIGHT</option>
+        </field>
+
+        <field
+            name="personal_data_transform"
+            type="list"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_TEXT_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_TEXT_DESC"
+            default="none">
+            <option value="capitalize">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_CAPITALIZE</option>
+            <option value="lowercase">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_LOWERCASE</option>
+            <option value="none">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_NONE</option>
+            <option value="uppercase">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_UPPERCASE</option>
+        </field>
+
+        <field
+            name="personal_data_size"
+            type="nobossrange"
+            min="0"
+            max="100"
+            step="1"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_SIZE_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_SIZE_DESC"
+            size="10"
+            maxlength="5"
+            default="16"
+        />
+
+        <field
+            name="personal_data_space"
+            type="nobossmultipleinputs"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_LABEL"
+            description="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_DESC"
+            unit="px" >
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_ABOVE"
+                type="text"
+                default="0"
+            />
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_BELOW"
+                type="text"
+                default="0"
+            />
+        </field>
+
+        <field
+            name="personal_data_color"
+            type="color"
+            format="rgba"
+            position="bottom"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_COLOR_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_COLOR_DESC"
+        />        
+    </fieldset>
+
+    <fieldset name="student_data" label="COM_NOBOSSTESTIMONIALS_STUDENT_DATA_TAB_LABEL" nbshowon="display_field_student_data_show_section:1">
+        <field 
+            name="student_data_font"
+            type="nobossfontlist"
+            label="LIB_NOBOSS_FIELD_NOBOSSFONTLIST_FONT_LABEL"
+            
+            defaultfont="Roboto_Regular.ttf"
+            defaultfontstyle="Regular"
+        />
+
+        <field
+            name="student_data_tag_html"
+            type="list"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_DESC"
+            default="span">
+            <option value="h1">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_1</option>
+            <option value="h2">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_2</option>
+            <option value="h3">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_3</option>
+            <option value="h4">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_4</option>
+            <option value="h5">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_5</option>
+            <option value="p">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_6</option>
+            <option value="span">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_7</option>
+            <option value="div">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_8</option>
+        </field>
+
+        <field
+            name="student_data_alignment"
+            type="list"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_DESC"
+            default="center">
+            <option value="left">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_OPT_LEFT</option>
+            <option value="center">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_OPT_CENTER</option>
+            <option value="right">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_OPT_RIGHT</option>
+        </field>
+
+        <field
+            name="student_data_transform"
+            type="list"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_TEXT_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_TEXT_DESC"
+            default="none">
+            <option value="capitalize">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_CAPITALIZE</option>
+            <option value="lowercase">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_LOWERCASE</option>
+            <option value="none">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_NONE</option>
+            <option value="uppercase">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_UPPERCASE</option>
+        </field>
+
+        <field
+            name="student_data_size"
+            type="nobossrange"
+            min="0"
+            max="100"
+            step="1"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_SIZE_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_SIZE_DESC"
+            size="10"
+            maxlength="5"
+            default="16"
+        />
+        
+        <field
+            name="student_data_space"
+            type="nobossmultipleinputs"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_LABEL"
+            description="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_DESC"
+            unit="px" >
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_ABOVE"
+                type="text"
+                default="0"
+            />
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_BELOW"
+                type="text"
+                default="0"
+            />
+        </field>
+
+        <field
+            name="student_data_color"
+            type="color"
+            format="rgba"
+            position="bottom"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_COLOR_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_COLOR_DESC"
+        />
+    </fieldset>
+
+    <fieldset name="professional_data" label="COM_NOBOSSTESTIMONIALS_PROFESSIONAL_DATA_TAB_LABEL" nbshowon="display_field_professional_data_show_section:1">
+        <field 
+            name="professional_data_font"
+            type="nobossfontlist"
+            label="LIB_NOBOSS_FIELD_NOBOSSFONTLIST_FONT_LABEL"
+            
+            defaultfont="Roboto_Regular.ttf"
+            defaultfontstyle="Regular"
+        />
+
+        <field
+            name="professional_data_tag_html"
+            type="list"
+            default="span"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_DESC">
+            <option value="h1">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_1</option>
+            <option value="h2">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_2</option>
+            <option value="h3">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_3</option>
+            <option value="h4">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_4</option>
+            <option value="h5">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_5</option>
+            <option value="p">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_6</option>
+            <option value="span">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_7</option>
+            <option value="div">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_HTML_TAG_OPT_8</option>
+        </field>
+
+        <field
+            name="professional_data_alignment"
+            type="list"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_DESC"
+            default="center">
+            <option value="left">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_OPT_LEFT</option>
+            <option value="center">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_OPT_CENTER</option>
+            <option value="right">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_ALIGNMENT_OPT_RIGHT</option>
+        </field>
+
+        <field
+            name="professional_data_transform"
+            type="list"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_TEXT_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_TEXT_DESC"
+            default="none">
+            <option value="capitalize">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_CAPITALIZE</option>
+            <option value="lowercase">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_LOWERCASE</option>
+            <option value="none">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_NONE</option>
+            <option value="uppercase">NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_TRANFORMATION_UPPERCASE</option>
+        </field>
+
+        <field
+            name="professional_data_size"
+            type="nobossrange"
+            min="0"
+            max="100"
+            step="1"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_SIZE_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_SIZE_DESC"
+            size="10"
+            maxlength="5"
+            default="16"
+        />
+
+        <field
+            name="professional_data_space"
+            type="nobossmultipleinputs"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_LABEL"
+            description="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_DESC"
+            unit="px" >
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_ABOVE"
+                type="text"
+                default="0"
+            />
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_BELOW"
+                type="text"
+                default="0"
+            />
+        </field>
+
+        <field
+            name="professional_data_color"
+            type="color"
+            format="rgba"
+            position="bottom"
+            label="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_COLOR_LABEL"
+            description="NOBOSS_EXTENSIONS_CUSTOMIZATION_TEXT_COLOR_DESC"
+        />
+
+    </fieldset>
+
+    <fieldset name="transitions" label="NOBOSS_EXTENSIONS_MODAL_ITEMS_CUSTOMIZATION_TRANSITIONS_TAB"
+    nbshowon="display_field_options:only_text">
+
+        <field
+            name="enable_auto_play"
+            type="nobossradio"
+            class="btn-group btn-group-yesno"
+            label="NOBOSS_EXTENSIONS_TRANSITION_ITEMS_ENABLE_AUTOPLAY_LABEL"
+            description="NOBOSS_EXTENSIONS_TRANSITION_ITEMS_ENABLE_AUTOPLAY_DESC"
+            default="0">
+            <option value="0">JNO</option>
+			<option value="1">JYES</option>
+        </field>
+
+        <field
+            name="auto_play_interval"
+            type="nobossrange"
+            min="1"
+            max="10"
+            label="NOBOSS_EXTENSIONS_TRANSITION_ITEMS_TRANSITION_INTERVAL_LABEL"
+            description="NOBOSS_EXTENSIONS_TRANSITION_ITEMS_TRANSITION_INTERVAL_DESC"
+            default="5"
+            showon="enable_auto_play:1"
+        />
+
+    </fieldset>
+
+    <fieldset name="navigation" label="COM_NOBOSSTESTIMONIALS_NAVIGATION">
+        <field
+            type="note"
+            label="NOBOSS_EXTENSIONS_DOTS_SECTION_NAME_LABEL"
+        />
+        <field
+            name="show_dots"
+            type="nobossradio"
+            class="btn-group btn-group-yesno"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_DISPLAY_LABEL"
+            description="NOBOSS_EXTENSIONS_DOTS_DISPLAY_DESC"
+            default="1">
+            <option value="0">JNO</option>
+			<option value="1">JYES</option>
+        </field>
+
+        <field
+            name="dots_color"
+            type="color"
+            format="rgba"
+            position="bottom"
+            label="NOBOSS_EXTENSIONS_DOTS_COLOR_ITEMS_LABEL"
+            description="NOBOSS_EXTENSIONS_DOTS_COLOR_ITEMS_DESC"
+            showon="show_dots:1"
+        />
+
+        <field
+            name="dots_active_color"
+            type="color"
+            format="rgba"
+            position="bottom"
+            label="NOBOSS_EXTENSIONS_DOTS_COLOR_ITEM_ACTIVE_LABEL"
+            description="NOBOSS_EXTENSIONS_DOTS_COLOR_ITEM_ACTIVE_DESC"
+            showon="show_dots:1"
+        />
+
+        <field
+            name="dots_size"
+            type="nobossmultipleinputs"
+            label="NOBOSS_EXTENSIONS_DOTS_SIZE_OF_ITEMS_LABEL"
+            description="NOBOSS_EXTENSIONS_DOTS_SIZE_OF_ITEMS_DESC"
+            unit="px" 
+            showon="show_dots:1">
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_WIDTH_LABEL"
+                type="text"
+                default="6"
+            />
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_HEIGHT_LABEL"
+                type="text"
+                default="6"
+            />
+        </field>
+
+        <field
+            name="dots_active_size"
+            type="nobossmultipleinputs"
+            label="NOBOSS_EXTENSIONS_DOTS_ACTIVE_ITEM_SIZE_LABEL"
+            description="NOBOSS_EXTENSIONS_DOTS_ACTIVE_ITEM_SIZE_DESC"
+            unit="px" 
+            showon="show_dots:1">
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_WIDTH_LABEL"
+                type="text"
+                default="6"
+            />
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_HEIGHT_LABEL"
+                type="text"
+                default="6"
+            />
+        </field>
+
+        <field
+            name="dots_spacing_items"
+            type="nobossrange"
+            min="0"
+            max="99"
+            step="1"
+            label="NOBOSS_EXTENSIONS_DOTS_SPACING_ITEMS_LABEL"
+            description="NOBOSS_EXTENSIONS_DOTS_SPACING_ITEMS_DESC"
+            size="10"
+            maxlength="5"
+            default="5"
+            showon="show_dots:1"
+        />
+
+        <field
+            name="show_dots_border"
+            type="nobossradio"
+            class="btn-group btn-group-yesno"
+            label="NOBOSS_EXTENSIONS_DOTS_BORDER_ITEMS_LABEL"
+            description="NOBOSS_EXTENSIONS_DOTS_BORDER_ITEMS_DESC"
+            default="0"
+            showon="show_dots:1">
+            <option value="0">JNO</option>
+			<option value="1">JYES</option>
+        </field>
+
+        <field
+            name="dots_border_color"
+            type="color"
+            format="rgba"
+            position="bottom"
+            label="NOBOSS_EXTENSIONS_DOTS_BORDER_COLOR_ITEMS_LABEL"
+            description="NOBOSS_EXTENSIONS_DOTS_BORDER_COLOR_ITEMS_DESC"
+            showon="show_dots:1[AND]show_dots_border:1"
+        />
+
+        <field
+            name="dots_border_radius_size"
+            type="nobossrange"
+            min="0"
+            max="50"
+            step="1"
+            label="NOBOSS_EXTENSIONS_DOTS_BORDER_RADIUS_ITEMS_LABEL"
+            description="NOBOSS_EXTENSIONS_DOTS_BORDER_RADIUS_ITEMS_DESC"
+            size="10"
+            maxlength="5"
+            showon="show_dots:1[AND]show_dots_border:1"
+        />
+        <field
+            type="note"
+            label="NOBOSS_EXTENSIONS_ARROWS_SECTION_NAME_LABEL"
+        />
+        <field
+            name="show_arrows"
+            type="list"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_DISPLAY_LABEL"
+            description="NOBOSS_EXTENSIONS_ARROWS_DISPLAY_DESC"
+            default="both">
+            <option value="both">NOBOSS_EXTENSIONS_GLOBAL_FIELD_DISPLAY_BOTH</option>
+            <option value="mobile">NOBOSS_EXTENSIONS_GLOBAL_FIELD_DISPLAY_MOBILE</option>
+            <option value="desktop">NOBOSS_EXTENSIONS_GLOBAL_FIELD_DISPLAY_DESKTOP</option>
+            <option value="none">NOBOSS_EXTENSIONS_GLOBAL_FIELD_DISPLAY_NONE</option>
+        </field>
+
+        <field 
+            name="arrows_icon"
+            type="nobossradioicons"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_ICON_LABEL"
+            description="NOBOSS_EXTENSIONS_ARROWS_ICON_DESC"
+            default="fa-angle"
+            fontsize="25px"
+            showon="show_arrows!:none"
+            parentclass="stack span-3-inline">
+                <option value="fa-chevron-circle" icon1="fa fa-chevron-circle-left" icon2="fa fa-chevron-circle-right"></option>
+                <option value="fa-arrow-circle" icon1="fa fa-arrow-circle-left" icon2="fa fa-arrow-circle-right"></option>
+                <option value="fa-angle" icon1="fa fa-angle-left" icon2="fa fa-angle-right"></option>
+                <option value="fa-chevron" icon1="fa fa-chevron-left" icon2="fa fa-chevron-right"></option>
+                <option value="fa-arrow-circle-o" icon1="fa fa-arrow-circle-o-left" icon2="fa fa-arrow-circle-o-right"></option>
+                <option value="fa-angle-double" icon1="fa fa-angle-double-left" icon2="fa fa-angle-double-right"></option>
+                <option value="fa-arrow" icon1="fa fa-arrow-left" icon2="fa fa-arrow-right"></option>
+                <option value="fa-caret-square-o" icon1="fa fa-caret-square-o-left" icon2="fa fa-caret-square-o-right"></option>
+                <option value="fa-long-arrow" icon1="fa fa-long-arrow-left" icon2="fa fa-long-arrow-right"></option>
+        </field>
+
+        <field
+            name="arrows_icon_size"
+            type="nobossrange"
+            min="0"
+            max="200"
+            step="1"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SIZE_LABEL"
+            description="NOBOSS_EXTENSIONS_ARROWS_SIZE_DESC"
+            size="10"
+            maxlength="5"
+            default="55"
+            showon="show_arrows!:none"
+        />
+
+        <field
+            name="arrows_icon_size_mobile"
+            type="nobossrange"
+            min="0"
+            max="200"
+            step="1"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SIZE_MOBILE_LABEL"
+            description="NOBOSS_EXTENSIONS_ICONS_SIZE_MOBILE_DESC"
+            size="10"
+            maxlength="5"
+            default="50"
+            showon="show_arrows!:none"
+        />
+
+        <field
+            name="arrows_color"
+            type="color"
+            format="rgba"
+            position="bottom"
+            label="NOBOSS_EXTENSIONS_COLORS_COLOR_LABEL"
+            description="NOBOSS_EXTENSIONS_ARROWS_COLOR_DESC"
+            showon="show_arrows!:none"
+        />
+        
+        <field
+            name="arrows_spacing"
+            type="nobossmultipleinputs"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_LABEL"
+            description="NOBOSS_EXTENSIONS_ARROWS_SPACING_DESC"
+            unit="px"
+            showon="show_arrows!:none">
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_ABOVE"
+                type="text"
+                default="0"
+            />
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_SIDES"
+                type="text"
+                default="15"
+            />
+            <nbfield
+                label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_SPACING_BELOW"
+                type="text"
+                default="0"
+            />
+        </field>
+
+        <field
+            name="show_arrows_border"
+            type="nobossradio"
+            class="btn-group btn-group-yesno"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_BORDER_LABEL"
+            description="NOBOSS_EXTENSIONS_ARROWS_DISPLAY_BORDER_DESC"
+            default="0"
+            showon="show_arrows!:none">
+            <option value="0">JNO</option>
+			<option value="1">JYES</option>
+        </field>
+
+        <field
+            name="arrows_border_color"
+            format="rgba"
+            position="bottom"
+            label="NOBOSS_EXTENSIONS_COLORS_BORDER_COLOR_LABEL"
+            description="NOBOSS_EXTENSIONS_ARROWS_BORDER_COLOR_DESC"
+            showon="show_arrows!:none[AND]show_arrows_border:1"
+        />
+
+        <field
+            name="show_arrows_border_radius"
+            type="nobossradio"
+            class="btn-group btn-group-yesno"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_ROUNDED_BORDER_LABEL"
+            description="NOBOSS_EXTENSIONS_ARROWS_DISPLAY_BORDER_RADIUS_DESC"
+            default="0"
+            showon="show_arrows!:none">
+            <option value="0">JNO</option>
+			<option value="1">JYES</option>
+        </field>
+
+        <field
+            name="arrows_border_radius"
+            type="nobossrange"
+            min="0"
+            max="50"
+            step="1"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_BORDER_RADIUS_LABEL"
+            description="NOBOSS_EXTENSIONS_ARROWS_BORDER_RADIUS_DESC"
+            size="10"
+            maxlength="5"
+            showon="show_arrows!:none[AND]show_arrows_border_radius:1"
+        />
+
+        <field
+            name="show_arrows_background"
+            type="nobossradio"
+            class="btn-group btn-group-yesno"
+            label="NOBOSS_EXTENSIONS_GLOBAL_FIELD_DISPLAY_BACKGROUND_LABEL"
+            description="NOBOSS_EXTENSIONS_ARROWS_DISPLAY_BACKGROUND_DESC"
+            default="0"
+            showon="show_arrows!:none">
+            <option value="0">JNO</option>
+			<option value="1">JYES</option>
+        </field>
+
+        <field
+            name="arrows_background"
+            type="color"
+            format="rgba"
+            position="bottom"
+            label="NOBOSS_EXTENSIONS_COLORS_BACKGROUND_COLOR_LABEL"
+            description="NOBOSS_EXTENSIONS_ARROWS_BACKGROUND_COLOR_DESC"
+            showon="show_arrows!:none[AND]show_arrows_background:1"
+        />
+
+        <field
+            name="arrows_background_hover"
+            type="color"
+            format="rgba"
+            position="bottom"
+            label="NOBOSS_EXTENSIONS_COLORS_BACKGROUND_COLOR_HOVER_LABEL"
+            description="NOBOSS_EXTENSIONS_ARROWS_BACKGROUND_HOVER_DESC"
+            showon="show_arrows!:none[AND]show_arrows_background:1"
+        />
+    </fieldset>
+</form>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0" type="plugin" group="system">
+    <name>Custom Plugin</name>
+    <files>
+        <filename plugin="custom">custom.php</filename>
+    </files>
+</extension>

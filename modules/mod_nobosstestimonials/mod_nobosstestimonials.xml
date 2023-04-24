@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.5.0" client="site" method="upgrade">
+	<name>MOD_NOBOSSTESTIMONIALS</name>
+	<author>No Boss Technology</author>
+	<creationDate>2023-04-10</creationDate>
+    <author>No Boss Technology</author>
+    <autorURL>https://www.nobosstechnology.com/</autorURL>
+    <authorEmail>contact@nobosstechnology.com</authorEmail>
+    <copyright>© 2023 No Boss Technology</copyright>
+	<license>https://www.gnu.org/licenses/lgpl-3.0.en.html GNU/LGPL</license>
+	<version>1.4.9</version>
+	<description>MOD_NOBOSSTESTIMONIALS_XML_DESCRIPTION</description>
+    <scriptfile>script.extension.php</scriptfile>
+	<files>
+		<folder>assets</folder>
+		<folder>language</folder>
+        <folder>fields</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename module="mod_nobosstestimonials">mod_nobosstestimonials.php</filename>
+		<filename>mod_nobosstestimonials.xml</filename>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="modules/mod_nobosstestimonials/fields">
+			<fieldset name="basic" addfieldpath="libraries/noboss/forms/fields">
+				
+                <field type="nobossnote" label="MOD_NOBOSSTESTIMONIAL_INTRO"/>
+
+				<field type="nobossrequestjscss" filetype="js" file="modules/mod_nobosstestimonials/assets/admin/js/mod_nobosstestimonials.min.js"/>
+				<field type="nobossrequestjscss" filetype="css" file="modules/mod_nobosstestimonials/assets/admin/css/mod_nobosstestimonials.min.css"/>
+				<field type="nobossloadtranslation"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

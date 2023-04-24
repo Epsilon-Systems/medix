@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset
+        name="photos_config"
+        label="COM_NOBOSSTESTIMONIALS_TAB_PHOTOS_CONFIG_LABEL"
+        description="COM_NOBOSSTESTIMONIALS_TAB_PHOTOS_CONFIG_DESC"
+        addfieldpath="libraries/noboss/forms/fields"
+        addrulepath="libraries/noboss/forms/rules" >
+
+        <field
+            name="size_limit_upload_file"
+            type="nobosslimitfilesize"
+            label="COM_NOBOSSTESTIMONIALS_SIZE_LIMIT_UPLOAD_PHOTO_LABEL"
+            description="COM_NOBOSSTESTIMONIALS_SIZE_LIMIT_UPLOAD_PHOTO_DESC"
+            validate="nobosslimitfilesize"
+            default="6291456"
+            error_less_then_zero = "COM_NOBOSSTESTIMONIALS_ERROR_FIELD_FILELIMIT_VALUE_VERY_LOW"
+            error_bigger_then_config = "COM_NOBOSSTESTIMONIALS_ERROR_FIELD_FILELIMIT_LIMIT_UPLOAD_EXCEEDED"
+            parentclass="stack span-3-inline"
+             />
+
+        <field
+            name="file_upload_extensions_granted"
+            type="list"
+            label="COM_NOBOSSTESTIMONIALS_FILE_EXTENSIONS_GRANTED_LABEL"
+            description="COM_NOBOSSTESTIMONIALS_FILE_EXTENSIONS_GRANTED_DESC"
+            multiple="true"
+            default='[".jpg", ".png", ".gif"]'
+            parentclass="stack span-3-inline"
+            required="required">
+            <option value=".jpg">JPG</option>
+            <option value=".png">PNG</option>
+            <option value=".gif">GIF</option>
+        </field>
+
+        <field
+            name="restrict_dimensions"
+            type="nobossradio"
+            default="1"
+            label="COM_NOBOSSTESTIMONIALS_RESTRICT_DIMENSIONS_LABEL"
+            description="COM_NOBOSSTESTIMONIALS_RESTRICT_DIMENSIONS_DESC"
+            class="btn-group btn-group-yesno"
+            parentclass="stack span-3-inline" >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field 
+            name="max_width"
+            type="number"
+            default="200"
+            required = "required"
+            label="COM_NOBOSSTESTIMONIALS_MAX_WIDTH_LABEL"
+            description="COM_NOBOSSTESTIMONIALS_MAX_WIDTH_DESC"
+            showon="restrict_dimensions:1"
+            parentclass="stack span-3" />
+
+        <field 
+            name="max_height"
+            type="number"
+            default="200"
+            required = "required"
+            label="COM_NOBOSSTESTIMONIALS_MAX_HEIGHT_LABEL"
+            description="COM_NOBOSSTESTIMONIALS_MAX_HEIGHT_DESC"
+            showon="restrict_dimensions:1"
+            parentclass="stack span-3-inline" />
+
+        <field
+            type="nobossloadtranslation"
+        />
+    </fieldset>
+
+    <fieldset name="license" label="COM_NOBOSSTESTIMONIALS_CONFIG_TAB_LICENSE_LABEL">
+        <field
+            type="nobosslicense"
+            name="license"
+            label="NOBOSS_EXTENSIONS_LICENSE_LABEL"
+            description="NOBOSS_EXTENSIONS_LICENSE_DESC"
+            default="2"
+            modal_display_notice_license="1"
+            modal_display_message="1"
+            view_license_info="1"
+        />
+    </fieldset>
+    <fieldset
+        name="permissions"
+        label="JCONFIG_PERMISSIONS_LABEL"
+        description="JCONFIG_PERMISSIONS_DESC">
+
+        <field
+            name="rules"
+            type="rules"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            filter="rules"
+            validate="rules"
+            component="com_nobosstestimonials"
+            section="component" />
+    </fieldset>
+
+</config>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form extension="com_nobosstestimonials" admin="false">
+
+    <fieldset name="hidden" addfieldpath="/libraries/noboss/forms/fields" addrulepath="/libraries/noboss/forms/rules">	
+		<field type="nobossloadtranslation"/>
+        <field type="nobosshaslibrary"/>
+        <field type="nobossrequestjsconstants" constants="NOBOSS_EXTENSIONS_GLOBAL_NEW"/>
+    </fieldset>
+
+	<fieldset name="main_data" label="COM_NOBOSSTESTIMONIALS_TESTIMONIALS_TAB_LABEL">
+		<field
+			id="id_testimonials_group"
+		  	name="id_testimonials_group"
+		   	type="sql"
+		   	default=""
+		   	label="COM_NOBOSSTESTIMONIALS_TESTIMONIALS_GROUP_LABEL"
+		   	description="COM_NOBOSSTESTIMONIALS_TESTIMONIALS_GROUP_DESC"
+		   	query="
+		    	SELECT
+		    		*
+		    	FROM
+		    		#__noboss_testimonial_group
+		    	WHERE
+		    		state IN (0, 1)"
+		   	key_field="id_testimonials_group"
+		   	value_field="name_testimonials_group"
+		   	required="true"
+            parentclass="stack span-3-inline"
+    	>
+    		<option value="">COM_NOBOSSTESTIMONIALS_TESTIMONIALS_GROUP_DEFAULT_OPTION</option>
+		</field>
+
+		<field
+			id="author_name"
+			name="author_name"
+			type="text"
+			required="required"
+			hint="João da Silva"
+            Class="hidden-group"
+			label="COM_NOBOSSTESTIMONIALS_AUTHOR_NAME_LABEL"
+			description="COM_NOBOSSTESTIMONIALS_AUTHOR_NAME_DESC"
+            parentclass="stack span-3-inline">
+		</field>
+
+		<field
+			id="email"
+			name="email"
+			type="email"
+			label="COM_NOBOSSTESTIMONIALS_EMAIL_LABEL"
+			description="COM_NOBOSSTESTIMONIALS_EMAIL_DESC"
+			hint="mail@dominio.com"
+			class="inputbox hidden-group"
+			validate="email"
+            parentclass="stack span-3-inline" />
+
+		<field
+			id="telephone"
+			name="telephone"
+			type="text"
+            class="hidden-group"
+			label="COM_NOBOSSTESTIMONIALS_TELEPHONE_LABEL"
+			description="COM_NOBOSSTESTIMONIALS_TELEPHONE_DESC"
+			hint="(xx) 9xxxx-xxxx"
+            parentclass="stack span-3-inline" />
+
+		<field
+			id="course"
+			name="course"
+			type="text"
+            class="hidden-group"
+			label="COM_NOBOSSTESTIMONIALS_COURSE_LABEL"
+			description="COM_NOBOSSTESTIMONIALS_COURSE_DESC"
+			hint="Web development"
+            parentclass="stack span-3-inline">
+		</field>
+
+		<field
+			id="class"
+			name="class"
+			type="text"
+            class="hidden-group"
+			label="COM_NOBOSSTESTIMONIALS_CLASS_LABEL"
+			description="COM_NOBOSSTESTIMONIALS_CLASS_DESC"
+			hint="102A"
+            parentclass="stack span-3-inline">
+		</field>
+		
+		<field
+			id="conclusion_year"
+			name="conclusion_year"
+			type="text"
+            class="hidden-group"
+			label="COM_NOBOSSTESTIMONIALS_CONCLUSION_YEAR_LABEL"
+			description="COM_NOBOSSTESTIMONIALS_CONCLUSION_YEAR_DESC"
+			hint="2021"
+            parentclass="stack span-3-inline">
+		</field>
+
+		<field
+			id="company"
+			name="company"
+			type="text"
+            class="hidden-group"
+			label="COM_NOBOSSTESTIMONIALS_COMPANY_LABEL"
+			description="COM_NOBOSSTESTIMONIALS_COMPANY_DESC"
+			hint="No Boss Technology"
+            parentclass="stack span-3-inline">
+		</field>
+
+		<field
+			id="profession"
+			name="profession"
+			type="text"
+            class="hidden-group"
+			label="COM_NOBOSSTESTIMONIALS_PROFESSION_LABEL"
+			description="COM_NOBOSSTESTIMONIALS_PROFESSION_DESC"
+			hint="Developer"
+            parentclass="stack span-3-inline">
+		</field>
+
+		<field
+			name="display_type"
+			type="list"
+            class="hidden-group"
+			label="COM_NOBOSSTESTIMONIALS_DISPLAY_TYPE_LABEL"
+			description="COM_NOBOSSTESTIMONIALS_DISPLAY_TYPE_DESC"
+			hint="COM_NOBOSSTESTIMONIALS_DISPLAY_TYPE_LABEL"
+            parentclass="stack span-3-inline"
+			>
+				<option value="text">NOBOSS_EXTENSIONS_GLOBAL_FIELD_TEXT_LABEL</option>
+				<option value="video">COM_NOBOSSTESTIMONIALS_OPTION_DISPLAY_YOUTUBE</option>
+		</field>
+		<field
+			name="text_testimonial"
+			type="textcounter"
+			showcharacters="remaining"
+			rows="9"
+			filter="raw"
+			class="required hidden-group span12"
+			label="COM_NOBOSSTESTIMONIALS_TEXT_TESTIMONIAL_LABEL"
+			description="COM_NOBOSSTESTIMONIALS_TEXT_TESTIMONIAL_DESC"
+			hint="COM_NOBOSSTESTIMONIALS_TEXT_TESTIMONIAL_HINT"
+			showon="display_type:text"
+            parentclass="stack">
+		</field>
+
+		<field
+			name="video_id"
+			type="text"
+			class="required hidden-group"
+			label="COM_NOBOSSTESTIMONIALS_VIDEO_TESTIMONIAL_LABEL"
+			description="COM_NOBOSSTESTIMONIALS_VIDEO_TESTIMONIAL_DESC"
+			hint="iwaGo6XYJoA"
+			showon="display_type:video"
+            parentclass="stack span-3-inline">
+		</field>
+		<field
+			id="photo"
+			name="photo"
+			type="nobossbinaryfile"
+			extension="com_nobosstestimonials"
+            class="hidden-group"
+			label="COM_NOBOSSTESTIMONIALS_PHOTO_LABEL"
+			description="COM_NOBOSSTESTIMONIALS_PHOTO_DESC"
+			label_delete_file="COM_NOBOSSTESTIMONIALS_PHOTO_DELETE_LABEL"
+			label_upload_button = "COM_NOBOSSTESTIMONIALS_PHOTO_UPLOAD_BUTTON_LABEL"
+			label_view_file = "COM_NOBOSSTESTIMONIALS_PHOTO_VIEW_SEND_LABEL"
+			msg_error_max_file_size = "COM_NOBOSSTESTIMONIALS_MESSAGE_ERROR_PHOTO_MAX_SIZE"
+			msg_error_extension_file_granted = "COM_NOBOSSTESTIMONIALS_MESSAGE_ERROR_PHOTO_EXTENSION_GRANTED"
+			hint="COM_NOBOSSTESTIMONIALS_PHOTO_LABEL"
+            parentclass="stack span-3-inline" />		  
+	</fieldset>
+
+    <fieldset name="license" label="NOBOSS_EXTENSIONS_TAB_LICENSE_LABEL">
+        <field
+            type="nobosslicense"
+            name="license"
+            label="NOBOSS_EXTENSIONS_LICENSE_LABEL"
+            description="NOBOSS_EXTENSIONS_LICENSE_DESC"
+            default="2"
+        />
+    </fieldset>
+
+    <fieldset name="details">
+
+		<field name="state" type="list"
+			label="JSTATUS" description="JFIELD_PUBLISHED_DESC"
+			class="chzn-color-state form-select-color-state" size="1" default="1">
+			<option value="1">
+				JPUBLISHED</option>
+			<option value="0">
+				JUNPUBLISHED</option>
+			<option value="2">
+				JARCHIVED</option>
+			<option value="-2">
+				JTRASHED</option>
+		</field>
+		<field
+			id="created_by"
+			name="created_by"
+			type="user"
+			class="text"
+			label="JGLOBAL_FIELD_CREATED_BY_LABEL"
+			description="JGLOBAL_FIELD_CREATED_BY_DESC"
+			readonly="true" />
+
+		<field
+			id="created"
+			name="created"
+			type="text"
+			class="text"
+			label="JGLOBAL_FIELD_CREATED_LABEL"
+			description="JGLOBAL_FIELD_CREATED_DESC"
+			readonly="true" />
+	
+		<field
+			id="modified_by"
+			name="modified_by"
+			type="user"
+			class="text"
+			label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+			description="JGLOBAL_FIELD_MODIFIED_BY_DESC"
+			readonly="true" />
+			
+		<field
+			id="modified"
+			name="modified"
+			type="text"
+			class="text"
+			label="JGLOBAL_FIELD_MODIFIED_LABEL"
+			readonly="true" />
+		<field
+			id="language"
+			name="language"
+			type="language"
+			label="JGRID_HEADING_LANGUAGE"
+			description="JOPTION_SELECT_LANGUAGE">
+			<option value="*">JALL</option>
+
+		</field>	
+		<field
+			id="id"
+			name="id"
+			type="text"
+			default="0"
+			readonly="true"
+			class="readonly"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description ="JGLOBAL_FIELD_ID_DESC" />
+	</fieldset>
+</form>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.5.0" type="plugin" group="system" method="upgrade">
+    <name>PLG_NOBOSSAUTOUPDATE</name>
+    <creationDate>2022-12-23</creationDate>
+    <author>No Boss Technology</author>
+    <autorURL>https://www.nobosstechnology.com/</autorURL>
+    <authorEmail>contact@nobosstechnology.com</authorEmail>
+    <copyright>© 2022 No Boss Technology</copyright>
+    <license>https://www.gnu.org/licenses/lgpl-3.0.en.html GNU/LGPL</license>
+    <version>2.1.5</version>
+    <description>PLG_NOBOSSAUTOUPDATE_XML_DESCRIPTION</description>
+    <scriptfile>script.plugin.php</scriptfile>
+    <updateservers>
+        <server type="extension" priority="1" name="PLG_NOBOSSAUTOUPDATE">https://www.nobossextensions.com/repository/extensions/nobossautoupdate/xml.xml</server>
+    </updateservers>
+    <files>
+        <folder>forms</folder>
+        <folder>language</folder>
+        <filename plugin="nobossautoupdate">nobossautoupdate.php</filename>
+        <filename>nobossautoupdate.xml</filename>
+    </files>
+    <config>
+
+        <fields name="params" addfieldpath="libraries/noboss/forms/fields">
+            <fieldset name="basic" addfieldpath="plugins/system/nobossautoupdate/forms/fields">
+                <field type="note" description="PLG_NOBOSSAUTOUPDATE_INTRO"/>
+
+                <field type="nobosshaslibrary"/>
+                
+                <field type="nobossloadtranslation"/>
+
+                <field type="nobossrequestjscss" filetype="css" file="plugins/system/nobossautoupdate/assets/css/nobossautoupdate.css"/>
+                
+                <field name="lastrun" type="hidden"/>
+            </fieldset>
+
+            <fieldset name="data" label="PLG_NOBOSSAUTOUPDATE_TAB_CONFIG_LABEL" description="PLG_NOBOSSAUTOUPDATE_TAB_CONFIG_DESC">
+               
+                <field name="update_type_extension" type="list" label="PLG_NOBOSSAUTOUPDATE_FIELD_UPDATE_TYPE_EXTENSION_LABEL" description="PLG_NOBOSSAUTOUPDATE_FIELD_UPDATE_TYPE_EXTENSION_DESC" default="all_except_selected">
+                    <option value="only_noboss">PLG_NOBOSSAUTOUPDATE_FIELD_UPDATE_TYPE_EXTENSION_OPT_ONLY_NOBOSS</option>
+                    <option value="all_except_selected">PLG_NOBOSSAUTOUPDATE_FIELD_UPDATE_TYPE_EXTENSION_OPT_ALL_EXCEPT_SELECTED</option>
+                </field>
+
+                <field name="extensions_ignore" type="sql" label="PLG_NOBOSSAUTOUPDATE_FIELD_EXTENSIONS_IGNORE_LABEL" description="PLG_NOBOSSAUTOUPDATE_FIELD_EXTENSIONS_IGNORE_DESC" query="SELECT DISTINCT concat(a.element, ' (', a.type, ')') AS label, a.element AS value                             FROM #__extensions AS a                              INNER JOIN #__update_sites_extensions AS b ON b.extension_id = a.extension_id                             INNER JOIN #__update_sites AS c ON c.update_site_id = b.update_site_id                             WHERE c.enabled = '1'                             AND c.type = 'extension'                             AND a.element NOT IN ('noboss')                             ORDER BY FIELD(a.type, 'package', 'module', 'component', 'template', 'plugin', 'library', 'file')" key_field="value" value_field="label" multiple="true" showon="update_type_extension:all_except_selected"/>
+
+                <!-- TODO: Atualizao do Joommla é um recurso a ser desenvolvido ainda
+                            - Seria bom na funcao de 'update()' que é executada na library que separássemos em duas execucoes separadas via ajax (uma para extensoes e outra para library) para reduzir risco de timeout (atualizacao das extensoes ja eh demorada soh para ver o que esta disponivel para atualizar)
+                            - O campo abaixo ja consta como 'bloqueado' nas licencas de clientes que possuem a versao gratuita e nos planos gratuitos
+                -->
+                <!-- <field
+                    name="update_joomla"
+                    type="nobossradio"
+                    class="btn-group btn-group-yesno tooltip-desc"
+                    label="Atualizar o Joomla"
+                    description=""
+                    default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field> -->
+            
+                <field type="note" label="PLG_NOBOSSAUTOUPDATE_NOTE_RULES_UPDATE_LABEL"/>
+
+                <field name="execution_method" type="list" default="admin" required="true" label="PLG_NOBOSSAUTOUPDATE_EXECUTION_METHOD_LABEL" description="PLG_NOBOSSAUTOUPDATE_EXECUTION_METHOD_DESC">
+                        <option value="cron">PLG_NOBOSSAUTOUPDATE_EXECUTION_METHOD_OPT_CRON</option>
+                        <option value="admin">PLG_NOBOSSAUTOUPDATE_EXECUTION_METHOD_OPT_ADMIN</option>
+                </field>
+
+                <field name="execution_url" type="nobossautoupdateurl" label="PLG_NOBOSSAUTOUPDATE_EXECUTION_URL_LABEL" description="PLG_NOBOSSAUTOUPDATE_EXECUTION_URL_DESC" showon="execution_method:cron"/>
+
+                <field name="interval_verify" type="nobossrange" default="6" min="1" max="72" step="1" showon="execution_method:admin" required="true" label="PLG_NOBOSSAUTOUPDATE_INTERVAL_VERIFY_LABEL" description="PLG_NOBOSSAUTOUPDATE_INTERVAL_VERIFY_DESC"/>
+
+                <field type="note" label="PLG_NOBOSSAUTOUPDATE_NOTIFICATIONS_INTRO"/>
+
+                <field name="send_user_email" type="list" default="not" required="true" label="PLG_NOBOSSAUTOUPDATE_FIELD_SEND_USER_EMAIL_LABEL" description="PLG_NOBOSSAUTOUPDATE_FIELD_SEND_USER_EMAIL_DESC">
+                    <option value="not">PLG_NOBOSSAUTOUPDATE_FIELD_SEND_USER_EMAIL_OPT_NOT</option>
+                    <option value="error">PLG_NOBOSSAUTOUPDATE_FIELD_SEND_USER_EMAIL_OPT_ERROR</option>
+                    <option value="ever">PLG_NOBOSSAUTOUPDATE_FIELD_SEND_USER_EMAIL_OPT_EVER</option>
+                </field>
+
+                <field name="user_email" type="email" default="" label="PLG_NOBOSSAUTOUPDATE_FIELD_USER_EMAIL_LABEL" description="PLG_NOBOSSAUTOUPDATE_FIELD_USER_EMAIL_DESC" showon="send_user_email!:not"/>
+
+            </fieldset>
+
+            <!-- Aba 'Licenca' -->
+            <fieldset name="license" label="NOBOSS_EXTENSIONS_TAB_LICENSE_LABEL"> 
+                <field type="nobosslicense" name="license" label="NOBOSS_EXTENSIONS_LICENSE_LABEL" description="NOBOSS_EXTENSIONS_LICENSE_DESC" modal_display_messages="true" modal_display_notice_license="true"/> 
+            </fieldset> 
+
+        </fields>
+    </config>
+</extension>

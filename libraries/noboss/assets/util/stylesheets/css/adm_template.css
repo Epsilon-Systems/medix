@@ -1,0 +1,32 @@
+/* Esconde a identificacao do modulo na aba 'Modulos' */
+/* line 2, ../sass/adm_template.scss */
+div#details hr,
+div#details .info-labels,
+div#details h3,
+div#details .info-labels + div {
+  display: none;
+}
+
+/* line 10, ../sass/adm_template.scss */
+div#details hr {
+  display: none;
+}
+
+/* line 14, ../sass/adm_template.scss */
+.popover-content {
+  word-wrap: break-word;
+}
+
+/* line 19, ../sass/adm_template.scss */
+#details .col-lg-9 .control-label,
+#details .span9 .control-label,
+#details .col-lg-9 > h2,
+#details .span9 > h2,
+#details .info-labels,
+#details .col-lg-9 > hr {
+  display: none;
+}
+/* line 27, ../sass/adm_template.scss */
+#details .controls {
+  margin-left: 0;
+}
