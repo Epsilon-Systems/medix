@@ -1,0 +1,35 @@
+{
+	"name": "jodit/application",
+	"description": "Jodit FileBrowser and Uploader connector",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Chupurnov Valeriy",
+			"email": "chupurnov@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Jodit\\": [
+				"src/"
+			]
+		}
+	},
+	"require": {
+		"php": ">=7.1",
+		"ext-curl": ">=6.0.0",
+		"abeautifulsite/simpleimage": "^3.6.0",
+		"ext-gd": "*",
+		"ext-json": "*",
+		"dompdf/dompdf": "^1.1",
+		"cocur/slugify": "^4.2",
+		"ext-mbstring": "*"
+	},
+	"require-dev": {
+		"codeception/codeception": "^4.1",
+		"vimeo/psalm": "^4.4",
+		"codeception/module-rest": "^1.2",
+		"codeception/module-phpbrowser": "^1.0",
+		"codeception/module-asserts": "^1.3"
+	}
+}

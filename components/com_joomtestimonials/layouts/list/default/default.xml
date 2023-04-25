@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <name>Default</name>
+    <author>JoomBoost</author>
+    <creationDate>September 2021</creationDate>
+    <copyright>Copyright (c) 2020 - 2021 JoomBoost. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>support@joomboost.com</authorEmail>
+    <authorUrl>https://www.joomboost.com</authorUrl>
+    <version>1.0.0</version>
+    <description>
+        <![CDATA[
+	This layout allows you to represent testimonials in a simple way as represented in the figure. Also it gives you a lot of possibilities to customize it exactly as you like it to appear (style, position of elements, show/hide elements ...).
+	]]>
+    </description>
+</form>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>com_joomtestimonials</name>
+	<author>JoomBoost</author>
+	<creationDate>05/28/2017</creationDate>
+	<copyright>(C) 2013 - 2021 JoomBoost. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@joomboost.com</authorEmail>
+	<authorUrl>http://www.joomboost.com</authorUrl>
+	<version>4.5.2</version>
+	<description>
+	<![CDATA[
+		<p>Advanced Testimonials component for Joomla! - Showcase and manage testimonials easily, also allow users to submit feedbacks</p>
+	]]>
+	</description>
+
+	<scriptfile>install.php</scriptfile>
+
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>joomtestimonials.php</filename>
+		<filename>controller.php</filename>
+		<filename>metadata.xml</filename>
+		<filename>router.php</filename>
+		<folder>controllers</folder>
+		<folder>forms</folder>
+		<folder>helpers</folder>
+		<folder>layouts</folder>
+		<folder>models</folder>
+		<folder>src</folder>
+		<folder>views</folder>
+	</files>
+
+	<languages folder="site">
+		<language tag="en-GB">language/com_joomtestimonials.ini</language>
+	</languages>
+	
+	<media folder="media" destination="com_joomtestimonials">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>list</folder>
+		<filename>index.html</filename>
+		<filename>joomla.asset.json</filename>
+	</media>
+	
+	<administration>
+		<menu>com_joomtestimonials</menu>
+		<submenu>
+			<menu link="option=com_joomtestimonials&amp;view=dashboard" view="dashboard">com_joomtestimonials_submenu_dashboard</menu>
+			<menu link="option=com_joomtestimonials&amp;view=testimonials" view="testimonials">com_joomtestimonials_submenu_testimonials</menu>
+			<menu link="option=com_categories&amp;extension=com_joomtestimonials" view="categories">com_joomtestimonials_submenu_categories</menu>
+		</submenu>
+
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>joomtestimonials.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>layouts</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+
+		<languages folder="admin">
+			<language tag="en-GB">language/com_joomtestimonials.ini</language>
+			<language tag="en-GB">language/com_joomtestimonials.sys.ini</language>
+		</languages>
+	</administration>
+
+	<updateservers>
+		<server type="extension" priority="1" name="JoomTestimonials Update">
+			<![CDATA[https://www.joomboost.com/index.php?option=com_mediastore&task=pluginTask&plugin=joomla&subtask=server&id=2&j=4]]>
+		</server>
+	</updateservers>
+
+	<dlid />
+
+</extension>
+

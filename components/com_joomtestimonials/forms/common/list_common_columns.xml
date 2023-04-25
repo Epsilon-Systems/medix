@@ -1,0 +1,123 @@
+<form>
+    <fieldset name="fields">
+            <field
+                    name="bs_xs_columns"
+                    type="list"
+                    default="12"
+                    label="COM_JOOMTESTIMONIALS_CONFIG_NUM_COLUMNS_XS_LABEL"
+                    description="COM_JOOMTESTIMONIALS_CONFIG_NUM_COLUMNS_DESC"
+                    hiddenDescription="true"
+            >
+                <option value="12">1</option>
+                <option value="6">2</option>
+                <option value="4">3</option>
+                <option value="3">4</option>
+                <option value="2">6</option>
+            </field>
+
+            <field
+                    name="bs_sm_columns"
+                    type="list"
+                    default="6"
+                    label="COM_JOOMTESTIMONIALS_CONFIG_NUM_COLUMNS_SM_LABEL"
+                    description="COM_JOOMTESTIMONIALS_CONFIG_NUM_COLUMNS_SM_DESC"
+                    hiddenDescription="true"
+                    >
+                    <option value="12">1</option>
+                    <option value="6">2</option>
+                    <option value="4">3</option>
+                    <option value="3">4</option>
+                    <option value="2">6</option>
+            </field>
+
+            <field
+                    name="bs_md_columns"
+                    type="list"
+                    default="4"
+                    label="COM_JOOMTESTIMONIALS_CONFIG_NUM_COLUMNS_MD_LABEL"
+                    description="COM_JOOMTESTIMONIALS_CONFIG_NUM_COLUMNS_MD_DESC"
+                    hiddenDescription="true"
+                    >
+                    <option value="12">1</option>
+                    <option value="6">2</option>
+                    <option value="4">3</option>
+                    <option value="3">4</option>
+                    <option value="2">6</option>
+            </field>
+
+            <field
+                    name="bs_lg_columns"
+                    type="list"
+                    default="3"
+                    label="COM_JOOMTESTIMONIALS_CONFIG_NUM_COLUMNS_LG_LABEL"
+                    description="COM_JOOMTESTIMONIALS_CONFIG_NUM_COLUMNS_LG_DESC"
+                    hiddenDescription="true"
+                    >
+                    <option value="12">1</option>
+                    <option value="6">2</option>
+                    <option value="4">3</option>
+                    <option value="3">4</option>
+                    <option value="2">6</option>
+            </field>
+
+            <field
+                    name="bs_xl_columns"
+                    type="list"
+                    default="3"
+                    label="COM_JOOMTESTIMONIALS_CONFIG_NUM_COLUMNS_XL_LABEL"
+                    description="COM_JOOMTESTIMONIALS_CONFIG_NUM_COLUMNS_XL_DESC"
+                    hiddenDescription="true"
+                    >
+                    <option value="12">1</option>
+                    <option value="6">2</option>
+                    <option value="4">3</option>
+                    <option value="3">4</option>
+                    <option value="2">6</option>
+            </field>
+
+            <field
+                    name="bs_xxl_columns"
+                    type="list"
+                    default="3"
+                    label="COM_JOOMTESTIMONIALS_CONFIG_NUM_COLUMNS_XXL_LABEL"
+                    description="COM_JOOMTESTIMONIALS_CONFIG_NUM_COLUMNS_XXL_DESC"
+                    hiddenDescription="true"
+            >
+                    <option value="12">1</option>
+                    <option value="6">2</option>
+                    <option value="4">3</option>
+                    <option value="3">4</option>
+                    <option value="2">6</option>
+            </field>
+
+            <field
+                    name="gutter_x"
+                    type="list"
+                    default="3"
+                    label="COM_JOOMTESTIMONIALS_CONFIG_GUTTER_X_LABEL"
+                    description="COM_JOOMTESTIMONIALS_CONFIG_GUTTER_X_DESC"
+                    hiddenDescription="true"
+            >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </field>
+
+            <field
+                    name="gutter_y"
+                    type="list"
+                    default="3"
+                    label="COM_JOOMTESTIMONIALS_CONFIG_GUTTER_Y_LABEL"
+                    description="COM_JOOMTESTIMONIALS_CONFIG_GUTTER_Y_DESC"
+                    hiddenDescription="true"
+            >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </field>
+    </fieldset>
+</form>

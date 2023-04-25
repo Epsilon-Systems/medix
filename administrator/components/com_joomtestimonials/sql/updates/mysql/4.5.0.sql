@@ -1,0 +1,1 @@
+ALTER TABLE `#__joomtestimonials` CHANGE `video` `video` varchar(255) NOT NULL DEFAULT '';

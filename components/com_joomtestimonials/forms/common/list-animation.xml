@@ -1,0 +1,170 @@
+<form>
+
+        <field name="animation"
+               type="radio"
+               class="btn-group"
+               default="0"
+               label="COM_JOOMTESTIMONIALS_ENABLE_ANIMATION"
+               description=""
+               hiddenDescription="true" >
+            <option value="1">Enable</option>
+            <option value="0">Disable</option>
+        </field>
+
+        <field name="anim_boxclass"
+               type="text"
+               label="COM_JOOMTESTIMONIALS_ANIMATE_BOXCLASS"
+               description="COM_JOOMTESTIMONIALS_ANIMATE_BOXCLASS_DESC"
+               hiddenDescription="true"
+               default="animatemycat"
+               showon="animation:1">
+        </field>
+
+        <field name="anim_animateclass"
+               type="list"
+               default="bounce"
+               label="COM_JOOMTESTIMONIALS_ANIMATE_ANIMATECLASS"
+               description="COM_JOOMTESTIMONIALS_ANIMATE_ANIMATECLASS_DESC"
+               hiddenDescription="true"
+               showon="animation:1">
+            <option value="bounce">Bounce</option>
+            <option value="flash">Flash</option>
+            <option value="pulse">Pulse</option>
+            <option value="rubberBand">Rubber Band</option>
+            <option value="shake">Shake</option>
+            <option value="headShake">Head Shake</option>
+            <option value="swing">Swing</option>
+            <option value="tada">Tada</option>
+            <option value="wobble">Wobble</option>
+            <option value="jello">Jello</option>
+            <option value="bounceIn">Bounce In</option>
+            <option value="bounceInDown">Bounce In Down</option>
+            <option value="bounceInLeft">Bounce In Left</option>
+            <option value="bounceInRight">Bounce In Right</option>
+            <option value="bounceInUp">Bounce In Up</option>
+            <option value="bounceOut">Bounce Out</option>
+            <option value="bounceOutDown">Bounce Out Down</option>
+            <option value="bounceOutLeft">Bounce Out Left</option>
+            <option value="bounceOutLeft">Bounce Out Left</option>
+            <option value="bounceOutUp">Bounce Out Up</option>
+            <option value="fadeIn">Fade In</option>
+            <option value="fadeInLeft">Fade In Left</option>
+            <option value="fadeInDownBig">Fade In Down Big</option>
+            <option value="fadeInDown">Fade In Down</option>
+            <option value="fadeInLeftBig">Fade In Left Big</option>
+            <option value="fadeInRight">Fade In Right</option>
+            <option value="fadeInRightBig">Fade In Right Big</option>
+            <option value="fadeInUp">Fade In Up</option>
+            <option value="fadeInUpBig">Fade In Up Big</option>
+            <option value="fadeOut">Fade Out</option>
+            <option value="fadeOutDown">Fade Out Down</option>
+            <option value="fadeOutDownBig">Fade Out Down Big</option>
+            <option value="fadeOutLeft">Fade Out Left</option>
+            <option value="fadeOutLeftBig">Fade Out Left Big</option>
+            <option value="fadeOutRight">Fade Out Right</option>
+            <option value="fadeOutRightBig">Fade Out Right Big</option>
+            <option value="fadeOutUp">Fade Out Up</option>
+            <option value="fadeOutUpBig">Fade Out Up Big</option>
+            <option value="flipInX">Flip In X</option>
+            <option value="flipInY">Flip In Y</option>
+            <option value="flipOutX">Flip Out X</option>
+            <option value="flipOutY">Flip Out Y</option>
+            <option value="lightSpeedIn">Light Speed In</option>
+            <option value="lightSpeedOut">Light Speed Out</option>
+            <option value="rotateIn">Rotate In</option>
+            <option value="rotateInDownLeft">Rotate In Down Left</option>
+            <option value="rotateInDownRight">Rotate In Down Right</option>
+            <option value="rotateInUpLeft">Rotate In Up Left</option>
+            <option value="rotateInUpRight">Rotate In Up Right</option>
+            <option value="rotateOut">Rotate Out</option>
+            <option value="rotateOutDownLeft">Rotate Out Down Left</option>
+            <option value="rotateOutDownRight">Rotate Out Down Right</option>
+            <option value="rotateOutUpLeft">Rotate Out Up Left</option>
+            <option value="rotateOutUpRight">Rotate Out Up Right</option>
+            <option value="hinge">Hinge</option>
+            <option value="jackInTheBox">Jack In The Box</option>
+            <option value="rollIn">Roll In</option>
+            <option value="rollOut">Roll Out</option>
+            <option value="zoomIn">Zoom In</option>
+            <option value="zoomInDown">Zoom In Down</option>
+            <option value="zoomInLeft">Zoom In Left</option>
+            <option value="zoomInRight">Zoom In Right</option>
+            <option value="zoomInUp">Zoom In Up</option>
+            <option value="zoomOut">Zoom Out</option>
+            <option value="zoomOutDown">Zoom Out Down</option>
+            <option value="zoomOutLeft">Zoom Out Left</option>
+            <option value="zoomOutRight">Zoom Out Right</option>
+            <option value="zoomOutUp">Jello</option>
+            <option value="slideInDown">Slide In Down</option>
+            <option value="slideInLeft">Slide In Left</option>
+            <option value="slideInRight">Slide In Right</option>
+            <option value="slideInUp">Slide In Up</option>
+            <option value="slideOutDown">Slide Out Down</option>
+            <option value="slideOutLeft">Slide Out Left</option>
+            <option value="slideOutRight">Slide Out Right</option>
+            <option value="slideOutUp">Slide Out Up</option>
+        </field>
+
+        <field name="anim_duration"
+               type="text"
+               default="0.4s"
+               label="COM_JOOMTESTIMONIALS_ANIMATE_DURATION"
+               description="COM_JOOMTESTIMONIALS_ANIMATE_DURATION_DESC"
+               hiddenDescription="true"
+               showon="animation:1">
+        </field>
+
+        <field name="anim_delay"
+               type="text"
+               default="0.3s"
+               label="COM_JOOMTESTIMONIALS_ANIMATE_DELAY"
+               description="COM_JOOMTESTIMONIALS_ANIMATE_DELAY_DESC"
+               hiddenDescription="true"
+               showon="animation:1">
+        </field>
+
+        <field name="anim_offset"
+               type="text"
+               class="btn-group"
+               default="0"
+               label="COM_JOOMTESTIMONIALS_ANIMATE_OFFSET"
+               description="COM_JOOMTESTIMONIALS_ANIMATE_OFFSET_DESC"
+               hiddenDescription="true"
+               showon="animation:1">
+        </field>
+
+        <field name="anim_mobile"
+               type="radio"
+               class="btn-group"
+               default="true"
+               label="COM_JOOMTESTIMONIALS_ANIMATE_MOBILE"
+               description="COM_JOOMTESTIMONIALS_ANIMATE_MOBILE_DESC"
+               hiddenDescription="true"
+               showon="animation:1">
+            <option value="true">Enable</option>
+            <option value="disable">Disable</option>
+        </field>
+
+        <field name="anim_live"
+               type="radio"
+               class="btn-group"
+               default="true"
+               label="COM_JOOMTESTIMONIALS_ANIMATE_LIVE"
+               description="COM_JOOMTESTIMONIALS_ANIMATE_LIVE_DESC"
+               hiddenDescription="true"
+               showon="animation:1">
+            <option value="true">Enable</option>
+            <option value="disable">Disable</option>
+        </field>
+
+        <field name="anim_scrollcontainer"
+               type="text"
+               class="btn-group"
+               default="null"
+               label="COM_JOOMTESTIMONIALS_ANIMATE_SCROLLCONTAINER"
+               description="COM_JOOMTESTIMONIALS_ANIMATE_SCROLLCONTAINER_DESC"
+               hiddenDescription="true"
+               showon="animation:1">
+        </field>
+
+</form>
