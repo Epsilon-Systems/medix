@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0" type="plugin" group="content" method="upgrade">
+	<name>Content - pdfviewer</name>
+	<author>Tazzios</author>
+	<creationDate>April 2023</creationDate>
+	<copyright></copyright>
+	<license>GNU/GPLv3 www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail></authorEmail>
+	<authorUrl>https://github.com/Tazzios</authorUrl>
+	<version>1.3.0</version>
+	<description>content plugin for PDF</description>
+	<files>
+		<filename plugin="pdfviewer">pdfviewer.php</filename>
+		<filename>index.html</filename>
+		<filename>pdfviewer.xml</filename>
+		<folder>assets</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			
+			<field 
+					name="viewer" type="list"
+					default="pdfjs"
+					label="Default viewer "
+				>
+				<option value="pdfjs">pdfjs</option>
+				<option value="pdfimage">pdfimage</option>
+			</field>
+			
+				<field 
+					name="style" type="list"
+					default="Embed"
+					label="Default viewer style"
+				>
+				<option value="Embed">Embedded</option>
+				<option value="Popup">Modal Popup</option>
+				<option value="New">Open in new window</option>		
+			</field>
+			<field 
+				name="linktext" 
+				type="text" default="Download" 
+				label="Default linktext for popup and new style" 
+				description=""
+			/>
+			<field type="spacer" name="myspacer1" label="Size for embed" />
+			<field 
+				name="embedwidth" 
+				type="text" default="100%" 
+				label="Embed width " 
+				description=""
+			/>
+			<field 
+				name="embedheight" 
+				type="text" default="800" 
+				label="Embed height " 
+				description=""
+			/>
+			<field type="spacer" name="myspacer" label="Size for popup" />
+			<field 
+				name="popupwidth" 
+				type="text" default="800" 
+				label="Popup width " 
+				description=""
+			/>
+			<field 
+				name="popupheight" 
+				type="text" default="800" 
+				label="Popup height " 
+				description=""
+			/>
+			<field 
+			 	name="debug" type="radio"
+				default="0"
+				label="Turn on DEBUG output to help find errors"
+				>
+					<option value="0">OFF</option>
+					<option value="1">ON</option>
+			</field>
+			</fieldset>
+
+			
+		</fields>
+	</config>
+	    <updateservers>
+      <server type="extension" priority="2" name="pdfviewer">https://raw.githubusercontent.com/tazzios/pdfviewer/master/updates_plugin.xml</server>
+    </updateservers>
+</extension>
