@@ -1,0 +1,84 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<extension type = "module" version = "1.0" client = "site" method="upgrade">
+  <name>EB PopUp Anything</name>
+  <author>ExtnBakers</author>
+  <version>1.5</version>
+  <creationDate>2021 Sep 09</creationDate>
+  <copyright>Copyright (C) 2021 extnbakers.com. All rights reserved.</copyright>
+  <authorEmail>hello@extnbakers.com</authorEmail>
+  <authorUrl>https://www.extnbakers.com</authorUrl>
+  <license>http://www.gnu.org/licenses/gpl-3.0.html</license>
+  <description>This module generates entry and exit marketing pop-up to engage customers. <![CDATA[ <br /><br /><strong>NOTE:</strong> <em>This module needs to be enabled at DEBUG module position.</em><br /><br /> ]]></description>
+  <namespace>Joomla\Module\debug</namespace>
+  <updateservers>
+    <server type="extension" priority="1" name="EB PopUp Anything">https://www.extnbakers.com/Joomla-Ext-Updates/updates.php?token=4e732ced3463d06de0ca9a15b6153677</server>
+  </updateservers>
+  <files>
+    <filename module="mod_ebpopupanything">mod_ebpopupanything.php</filename>
+    <folder>assets</folder>
+    <folder>core</folder>
+    <folder>language</folder>
+    <folder>tmpl</folder>
+    <folder>elements</folder>
+    <filename>index.html</filename>
+    <filename>LICENSE.txt</filename>
+  </files>
+  <languages/>
+  <config>
+    <fields name="params" addfieldpath="/modules/mod_ebpopupanything/elements/">
+      <fieldset name="basic"></fieldset>
+      <fieldset name="eb_popupanything_tab" label="EB_POPUPANYTHING_PIRCHASE_KEY"> 
+                <field name="eb_popupanything_purchase_key" type="secretkey" label="EB_POPUPANYTHING_PIRCHASE_KEY" description="EB_POPUPANYTHING_PIRCHASE_KEY_DESC" />      
+            </fieldset>
+      <fieldset name="POPUP_SETTING" label="POPUP_SETTING_LABEL">
+        <field name="position_style" type="list"  default="1" label="POSITION_STYLE_LABEL" description="POSITION_STYLE_DES">
+          <option value="1">Overlay</option>
+          <option value="2">Without overlay</option>
+        </field>
+        <field  name="overlay_color" type="color" format="rgba" showon="position_style:1"  label="POSITION_OVERLAY_COLOR_LABEL" description="POSITION_OVERLAY_COLOR_LABEL_DES" />
+        <field name="position_type" type="list"  default="1" label="POSITION_TYPE_LABEL" description="POSITION_TYPE_DES">
+          <option value="1">Flat</option>
+          <option value="2">With Box-Shadow</option>
+        </field>
+        <field  name="boxshadow_color" type="color" default="#333333" format="rgba" showon="position_type:2"  label="POSITION_SHADOW_COLOR_LABEL" description="POSITION_SHADOW_COLOR_LABEL_DES" />
+        <field name="popuptriggeron" type="list" default="1" label="POPUPTRIGGER" description="" class="btn-group">
+          <option value="1">OnPage Load</option>
+          <option value="2">OnPage Exit</option>
+        </field>
+        <field name="width_popup" type="text" default="640px" label="WIDTH_POPUP_LABEL" description="VIDEO_EMBED_NOTE_DES" />
+        <field name="cookieset" type="radio" default="0" label="COOKIE_POPUP_LABEL" description="COOKIE_POPUP_DES" class="btn-group">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+        <field name="cookietime" type="list" showon="cookieset:1" default="1" label="COOKIETIME" description="" class="btn-group">
+          <option value="1">Days</option>
+          <option value="2">Hours</option>
+          <option value="3">Minutes</option>
+        </field>
+        <field name="cookiesduration" type="text" showon="cookieset:1" default="1" label="COOKIES_DURATION" description="COOKIES_DURATION_DES"/>
+        <field name="color_popup_BG" type="color" default="#ffffff" label="COLOR_POPUP_LABEL" description="COLOR_POPUP_DES"/>
+        <field name="popup_content_color" type="color" default="#000" label="POPUP_CONTENT_COLOR" description="POPUP_CONTENT_COLOR_DES"/>
+        <field name="include_jquery" type="radio" class="btn-group" default="1"
+
+					label="INCLUDE_JQUERY_LABEl" description="INCLUDE_JQUERY_DESC">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+      </fieldset>
+      <fieldset name="CONTENT_POPUP_SETTING" label="CONTENT_POPUP_LABEL_SETTING">
+        <field name="content_type" type="list" label="CONTENT_METHOD_TYPE" description="CONTENT_METHOD_TYPE_DES">
+          <option value="1">Custom HTML</option>
+          <option value="2">Image</option>
+          <option value="3">Video</option>
+        </field>
+        <field name="html_content_popup" showon="content_type:1" type="editor" label="CONTENT_POPUP_LABEL" description="CONTENT_POPUP_DES" cols="40" rows="3" filter="raw" default=""/>
+        <field name="popupimage" type="media" showon="content_type:2"  label="IMAGES_LABEL" description="IMAGES_LABEL_DES"/>
+        <field name="popupimage_url" showon="content_type:2" type="url" label="POPUP_IMAGE_URL_LABEL" default="#" description="" />
+        <field name="popupimage_url_open" showon="content_type:2" type="checkbox" label="POPUP_IMAGE_URL_TARGET_LABEL" value="1" />
+        <field name="video_embed" showon="content_type:3" type="url" label="VIDEO_EMBED_LABEL" description="VIDEO_EMBED_DES" />
+        <field name="video_embed_height" showon="content_type:3" type="text" label="VIDEO_EMBED_HEIGHT_LABEL" default="360" description="" />
+      </fieldset>
+      <fieldset name="advanced"></fieldset>
+    </fields>
+  </config>
+</extension>

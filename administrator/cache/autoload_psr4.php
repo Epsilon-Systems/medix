@@ -108,6 +108,7 @@ return [
 	'Joomla\\Module\\Version\\Administrator\\' => [JPATH_ADMINISTRATOR . '/modules/mod_version/src'],
 	'Joomla\\Module\\Whosonline\\Site\\' => [JPATH_SITE . '/modules/mod_whosonline/src'],
 	'Joomla\\Module\\Wrapper\\Site\\' => [JPATH_SITE . '/modules/mod_wrapper/src'],
+	'Joomla\\Module\\debug\\Site\\' => [JPATH_SITE . '/modules/mod_ebpopupanything'],
 	'Joomla\\Plugin\\Actionlog\\Joomla\\' => [JPATH_PLUGINS . '/actionlog/joomla/src'],
 	'Joomla\\Plugin\\ApiAuthentication\\Basic\\' => [JPATH_PLUGINS . '/api-authentication/basic/src'],
 	'Joomla\\Plugin\\ApiAuthentication\\Token\\' => [JPATH_PLUGINS . '/api-authentication/token/src'],

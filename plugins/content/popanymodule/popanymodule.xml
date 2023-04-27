@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="4.2" group="content" method="upgrade">
+	<name>Content - Pop Any Module</name>
+	<author>Infyways Solutions</author>
+	<creationDate>05 February 2023</creationDate>
+	<copyright>Copyright (C) 2011 - 2023 Infyways Solutions. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@infyways.com</authorEmail>
+	<authorUrl>www.infyways.com</authorUrl>
+	<version>2.6</version>
+	<description><![CDATA[
+	<h4>Thank you for installing Pop Any Module.</h4><hr/>For any support and queries <a href="https://support.infyways.com" target="_blank">Click Here</a></br>For other Joomla! extensions please visit :<a href="http://store.infyways.com/" target="_blank" >https://store.infyways.com/</a>
+	]]></description>
+	<files>
+	<folder plugin="popanymodule">assets</folder>
+   	<filename plugin="popanymodule">popanymodule.php</filename>
+   	<filename plugin="popanymodule">index.html</filename>
+    </files>
+	<config>
+		<fields name="params">
+			<fieldset name="data1" label="Plugin Settings">			
+				<field name="open_effect" type="list" default="none" label="Opening Effect" description="Animation effect ('elastic', 'fade' or 'none') for each transition type when it is opened" >
+					<option value="none">None</option>
+					<option value="fade">Fade</option>
+					<option value="elastic">Elastic</option>
+				</field>
+				<field name="close_effect" type="list" default="none" label="Closing Effect" description="Animation effect ('elastic', 'fade' or 'none') for each transition type when it is closed">
+					<option value="none">None</option>
+					<option value="fade">Fade</option>
+					<option value="elastic">Elastic</option>
+				</field>
+				<field name="speed_selection" type="list" default="0" label="Animation Speed Mode" description="Select the mode of the animation speed.">
+						<option value="0">Auto</option>
+						<option value="1">User-defined</option>
+				</field>
+				<field name="open_speed_auto" type="list"  default="slow" label="Opening Speed" description="Select the opening speed of the popup." >
+					<option value="slow">Slow</option>
+					<option value="normal">Normal</option>
+					<option value="fast">Fast</option>
+				</field>
+				<field name="close_speed_auto" type="list" default="slow" label="Closing Speed" description="Select the closing speed of the popup." >
+					<option value="slow">Slow</option>
+					<option value="normal">Normal</option>
+					<option value="fast">Fast</option>
+				</field>
+				<field name="open_speed" type="text" label="Opening Speed" default="1000" description="The time it takes (in ms) to open transition" />
+				<field name="close_speed" type="text" label="Closing Speed" default="1000" description="The time it takes (in ms) to close transition" />		
+				<field name="overlayOpacity" type="text" label="Opacity of Popup box" description="Mention the opacity of the Popup box" default="0.3"/>
+	
+			</fieldset>
+			
+		</fields>
+	</config>
+		<updateservers>
+		<server type="extension" priority="1" name="Pop Any Module updater">https://updates.infyways.com/PopAnyModule/plugin.xml</server>
+	</updateservers>
+</extension>
