@@ -38,15 +38,17 @@ class HelixUltimateFeatureFooter
 
 			if($this->params->get('copyright'))
 			{
-				$output .= '<span class="sp-copyright">' .
+				$output .= '<span class="sp-copyright"><p>Powered by MD+ Agencia de Marketing Digital y Estudio Creativo</p><p>Developed by Epsilon Systems Group</p>' .
+				    
 					str_ireplace(
 						'{year}', date('Y'),
 						str_ireplace(
 							'joomla templates',
-							'<a target="_blank" rel="noopener noreferrer" href="https://www.joomshaper.com/joomla-templates">Joomla Templates</a>',
+							'2023',
+							'<a target="_blank" rel="noopener noreferrer" href="https://mdmasmkt.com/">Joomla Templates</a>',
 							str_ireplace(
 								'joomshaper',
-								'<a target="_blank" rel="noopener noreferrer" href="https://www.joomshaper.com">JoomShaper</a>',
+								'<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/epsilonsystems">JoomShaper</a>',
 								$this->params->get('copyright')
 							)
 						)
