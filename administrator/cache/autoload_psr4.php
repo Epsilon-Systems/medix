@@ -139,6 +139,8 @@ return [
 	'Joomla\\Plugin\\User\\Token\\' => [JPATH_PLUGINS . '/user/token/src'],
 	'RegularLabs\\Library\\' => [JPATH_LIBRARIES . '/regularlabs/src'],
 	'RegularLabs\\Plugin\\EditorButton\\Modals\\' => [JPATH_PLUGINS . '/editors-xtd/modals/src'],
+	'RegularLabs\\Plugin\\EditorButton\\ModulesAnywhere\\' => [JPATH_PLUGINS . '/editors-xtd/modulesanywhere/src'],
 	'RegularLabs\\Plugin\\System\\Modals\\' => [JPATH_PLUGINS . '/system/modals/src'],
+	'RegularLabs\\Plugin\\System\\ModulesAnywhere\\' => [JPATH_PLUGINS . '/system/modulesanywhere/src'],
 	'RegularLabs\\Plugin\\System\\RegularLabs\\' => [JPATH_PLUGINS . '/system/regularlabs/src'],
 ];

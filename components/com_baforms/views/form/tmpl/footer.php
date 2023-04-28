@@ -20,7 +20,9 @@ ob_start();
 if ($copyright) {
 ?>
 <p style="text-align: center; font-size: 12px; font-style: italic;">
+<!--
 <a href="http://www.balbooa.com/joomla-forms">Joomla Forms</a> makes it right. Balbooa.com</p>
+-->
 <?php
 }
 
