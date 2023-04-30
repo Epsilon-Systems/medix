@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="4.0.0" method="upgrade">
+    <name>Joomtestimonials</name>
+    <packagename>joomtestimonials</packagename>
+    <version>4.5.3</version>
+    <url>https://www.joomboost.com</url>
+    <creationDate>28-10-2021</creationDate>
+    <copyright>(C) 2013 - 2021 JoomBoost. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>support@joomboost.com</authorEmail>
+    <authorUrl>https://www.joomboost.com</authorUrl>
+    <author>JoomBoost</author>
+    <packager>JoomBoost</packager>
+    <packagerurl>https://www.joomboost.com</packagerurl>
+    <description>Joomtestimonials package used to install all extensions related to JoomTestimonials component at one time</description>
+    <blockChildUninstall>true</blockChildUninstall>
+
+    <scriptfile>pkg_script.php</scriptfile>
+
+    <files folder="packages">
+
+        <!-- Install components -->
+        <folder type="component" id="com_joomtestimonials">components/com_joomtestimonials</folder>
+
+        <!-- Install modules -->
+        <folder type="module" id="mod_joomtestimonials" client="site">modules/mod_joomtestimonials</folder>
+        <folder type="module" id="mod_joomtestimonials_stats" client="site">modules/mod_joomtestimonials_stats</folder>
+        <folder type="module" id="mod_joomtestimonials_submit" client="site">modules/mod_joomtestimonials_submit</folder>
+
+        <!-- Install plugins  -->
+        <folder enable="0" type="plugin" id="joomtestimonials" group="content">plugins/content/joomtestimonials</folder>
+        <folder enable="1" type="plugin" id="joomtestimonials" group="system">plugins/system/joomtestimonials</folder>
+
+    </files>
+
+</extension>

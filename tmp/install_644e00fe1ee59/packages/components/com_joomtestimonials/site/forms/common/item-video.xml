@@ -1,0 +1,52 @@
+<form>
+    <field
+        name="show_video"
+        type="radio"
+        class="btn-group"
+        default="0"
+        label="COM_JOOMTESTIMONIALS_CONFIG_SHOW_VIDEO_LABEL"
+        description="">
+    <option value="0">JHIDE</option>
+    <option value="1">JSHOW</option>
+    </field>
+    <field
+        name="video_type"
+        type="list"
+        default="0"
+        label="COM_JOOMTESTIMONIALS_CONFIG_VIDEO_TYPE_LABEL"
+        description="COM_JOOMTESTIMONIALS_CONFIG_VIDEO_TYPE_DESC"
+        hiddenDescription="true"
+        showon="show_video:1"
+        >
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="0">COM_JOOMTESTIMONIALS_CONFIG_VIDEO_IFRAME</option>
+        <option value="1">COM_JOOMTESTIMONIALS_CONFIG_BUTTON_LIGHTBOX</option>
+    </field>
+
+    <field
+        name="video_width"
+        type="text"
+        default="100%"
+        label="COM_JOOMTESTIMONIALS_VIDEO_WIDTH_LABEL"
+        description=""
+        showon="show_video:1"
+    />
+
+    <field
+        name="video_height"
+        type="text"
+        default="225px"
+        label="COM_JOOMTESTIMONIALS_VIDEO_HEIGHT_LABEL"
+        description=""
+        showon="show_video:1"
+    />
+
+    <field
+        name="lightbox_button"
+        type="text"
+        default="btn btn-primary"
+        label="COM_JOOMTESTIMONIALS_BUTTON_LIGHTBOX_CLASS"
+        showon="show_video:1"
+    />
+
+</form>

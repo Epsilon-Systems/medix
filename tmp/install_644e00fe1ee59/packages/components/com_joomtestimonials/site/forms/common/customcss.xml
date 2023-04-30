@@ -1,0 +1,12 @@
+<form>
+        <field
+                name="custom_css"
+                type="textarea"
+                default=""
+                class="input-xxlarge"
+                rows="10"
+                label="COM_JOOMTESTIMONIALS_CONFIG_CUSTOM_CSS_LABEL"
+                description="COM_JOOMTESTIMONIALS_CONFIG_CUSTOM_CSS_DESC"
+                hiddenDescription="true"
+        />
+</form>

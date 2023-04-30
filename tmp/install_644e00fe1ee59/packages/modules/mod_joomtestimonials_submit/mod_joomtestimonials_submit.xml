@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>JoomTestimonials Submit</name>
+	<author>JoomBoost</author>
+	<creationDate>May 2018</creationDate>
+	<copyright>Copyright (c) 2013 - 2018 JoomBoost. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@joomboost.com</authorEmail>
+	<authorUrl>https://www.joomboost.com</authorUrl>
+	<version>4.5.3</version>
+	<description>
+		<![CDATA[
+	<p class="alert alert-info">
+	Display modal button or full testimonial submission form of JoomTestimonials component</p>
+	]]>
+	</description>
+
+	<files>
+		<filename module="mod_joomtestimonials_submit">mod_joomtestimonials_submit.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">mod_joomtestimonials_submit.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field
+						name="layout"
+						type="list"
+						default="button"
+						label="MOD_JOOMTESTIMONIALS_SUBMIT_LAYOUT"
+				>
+					<option value="button">Open form in modal</option>
+					<option value="button_new">Open form in same tab</option>
+					<option value="form">Display full form</option>
+				</field>
+				<field
+						name="customclass"
+						type="text"
+						showon="layout:button[OR]layout:button_new"
+						default="btn btn-success"
+						label="MOD_JOOMTESTIMONIALS_SUBMIT_MODAL_CLASS_LABEL"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

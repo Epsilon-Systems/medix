@@ -1,0 +1,61 @@
+<form>
+
+        <field
+                name="text_limiter"
+                type="radio"
+                class="btn-group"
+                default="0"
+                label="COM_JOOMTESTIMONIALS_ENABLE_TEXT_LIMITER"
+                description=""
+                hiddenDescription="true"
+        >
+            <option value="1">COM_JOOMTESTIMONIALS_ENBALE</option>
+            <option value="0">COM_JOOMTESTIMONIALS_DISABLE</option>
+        </field>
+
+        <field
+                name="text_amount"
+                type="text"
+                default="200"
+                label="COM_JOOMTESTIMONIALS_TEXT_AMOUNT"
+                description=""
+                hiddenDescription="true"
+                showon="text_limiter:1"
+        />
+        <field
+                name="text_full"
+                type="radio"
+                class="btn-group"
+                default="1"
+                label="COM_JOOMTESTIMONIALS_TEXT_FULLTEXT"
+                description=""
+                hiddenDescription="true"
+                showon="text_limiter:1"
+        >
+            <option value="1">COM_JOOMTESTIMONIALS_HOVER</option>
+            <option value="0">COM_JOOMTESTIMONIALS_CLICK</option>
+        </field>
+        <field
+                name="less_button"
+                type="radio"
+                class="btn-group"
+                default="1"
+                label="COM_JOOMTESTIMONIALS_SHOW_LESS_BUTTON"
+                description=""
+                hiddenDescription="true"
+                showon="text_limiter:1[AND]text_full:0"
+        >
+            <option value="1">JSHOW</option>
+            <option value="0">JHIDE</option>
+        </field>
+        <field
+                name="text_button_classes"
+                type="text"
+                default="btn btn-sm btn-light"
+                label="COM_JOOMTESTIMONIALS_TEXT_BTN_CLASS"
+                description="COM_JOOMTESTIMONIALS_TEXT_BTN_CLASS_DESC"
+                hiddenDescription="true"
+                showon="text_limiter:1[AND]text_full:0"
+        />
+
+</form>

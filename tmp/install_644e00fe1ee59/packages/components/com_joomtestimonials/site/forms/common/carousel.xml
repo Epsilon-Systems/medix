@@ -1,0 +1,148 @@
+
+<form>
+    <field name="autoplay"
+           type="radio" class="btn-group"
+           default="1"
+           label="COM_JOOMTESTIMONIALS_CAROUSEL_AUTOPLAY"
+           description=""
+    >
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+    </field>
+
+    <field showon="autoplay:1"
+           name="autoplaydelay"
+           type="text"
+           default="2000"
+           label="COM_JOOMTESTIMONIALS_CAROUSEL_AUTOPLAYDELAY"
+           description="COM_JOOMTESTIMONIALS_CAROUSEL_AUTOPLAYDELAY_DESC" />
+
+    <field
+            name="effect"
+            type="list"
+            default="slide"
+            label="COM_JOOMTESTIMONIALS_CAROUSEL_EFFECT_TRANSITION">
+        <option	value="slide">Slide</option>
+        <option	value="coverflow">Coverflow</option>
+        <option	value="fade">Fade</option>
+    </field>
+
+    <field name="slideshadows"
+           type="radio" class="btn-group"
+           label="COM_JOOMTESTIMONIALS_CAROUSEL_HIDE_SHADOW_EFFECT"
+           description=""
+           default="true"
+           showon="effect:coverflow"
+    >
+        <option value="false">JNO</option>
+        <option value="true">JYES</option>
+    </field>
+
+    <field name="item1024"
+           type="text"
+           default="4"
+           label="COM_JOOMTESTIMONIALS_CAROUSEL_ITEM_DESKTOP"
+           description="COM_JOOMTESTIMONIALS_CAROUSEL_ITEM_DESKTOP_DESC" />
+
+    <field name="item768"
+           type="text"
+           default="3"
+           label="COM_JOOMTESTIMONIALS_CAROUSEL_ITEM_TABLET"
+           description="COM_JOOMTESTIMONIALS_CAROUSEL_ITEM_TABLET_DESC"  />
+
+    <field name="item480"
+           type="text"
+           default="1"
+           label="COM_JOOMTESTIMONIALS_CAROUSEL_ITEM_MOBILE"
+           description="COM_JOOMTESTIMONIALS_CAROUSEL_ITEM_MOBILE_DESC"/>
+
+    <field name="bar"
+           type="radio" class="btn-group" default="1"
+           label="COM_JOOMTESTIMONIALS_CAROUSEL_NAVIGATION_BAR"
+           description=""
+    >
+        <option value="0">None</option>
+        <option value="1">Pagination</option>
+        <option value="2">Scrollbar</option>
+    </field>
+
+    <field name="navbuttons"
+           type="radio" class="btn-group" default="1"
+           label="COM_JOOMTESTIMONIALS_CAROUSEL_NAV_BUTTONS"
+           description=""
+    >
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+    </field>
+    <field name="navbuttons_onhover"
+           type="radio" class="btn-group" default="0"
+           label="COM_JOOMTESTIMONIALS_CAROUSEL_NAV_BUTTONS_DISPLAY_ON_HOVER"
+           description=""
+    >
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+    </field>
+    <field name="navbuttons_color"
+           type="color" default=""
+           label="COM_JOOMTESTIMONIALS_CAROUSEL_NAV_BUTTONS_COLOR"
+           description=""
+           showon="navbuttons:1"
+    />
+    <field
+            name="nav_prev"
+            type="text"
+            default="❮"
+            showon="navbuttons:1"
+            label="COM_JOOMTESTIMONIALS_CAROUSEL_PREV_LABEL"
+            description="COM_JOOMTESTIMONIALS_CAROUSEL_PREV_DESC"
+    />
+    <field
+            name="nav_next"
+            type="text"
+            default="❯"
+            showon="navbuttons:1"
+            label="COM_JOOMTESTIMONIALS_CAROUSEL_NEXT_LABEL"
+            description="COM_JOOMTESTIMONIALS_CAROUSEL_NEXT_DESC"
+    />
+    <field name="autoheight"
+           type="radio" class="btn-group" default="true"
+           label="COM_JOOMTESTIMONIALS_CAROUSEL_AUTOHEIGHT_LABEL"
+           description="COM_JOOMTESTIMONIALS_CAROUSEL_AUTOHEIGHT_DESC"
+    >
+        <option value="false">JNO</option>
+        <option value="true">JYES</option>
+    </field>
+    <field
+            name="citemheight"
+            type="text"
+            default="100%"
+            label="COM_JOOMTESTIMONIALS_CAROUSEL_ITEMHEIGHT_LABEL"
+            description="COM_JOOMTESTIMONIALS_CAROUSEL_ITEMHEIGHT_DESC"
+            showon="autoheight:true"
+    />
+    <field name="loop"
+           type="radio" class="btn-group" default="true"
+           label="COM_JOOMTESTIMONIALS_CAROUSEL_LOOP"
+           description=""
+    >
+        <option value="false">JNO</option>
+        <option value="true">JYES</option>
+    </field>
+    <field name="loopblank"
+           type="radio" class="btn-group" default="false"
+           label="publish_up"
+           description=""
+    >
+        <option value="false">JNO</option>
+        <option value="true">JYES</option>
+    </field>
+    <field name="grapcursor"
+           type="radio" class="btn-group" default="true"
+           label="COM_JOOMTESTIMONIALS_CAROUSEL_GRAB_CURSOR"
+           description=""
+    >
+        <option value="false">JNO</option>
+        <option value="true">JYES</option>
+    </field>
+
+</form>

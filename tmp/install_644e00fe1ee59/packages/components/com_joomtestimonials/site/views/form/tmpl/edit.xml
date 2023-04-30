@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2013-2015 JoomBoost (https://www.joomboost.com). All rights reserved.
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+ -->
+
+<metadata>
+	<layout
+		title="COM_JOOMTESTIMONIALS_FORM_VIEW_DEFAULT_TITLE" option="COM_JOOMTESTIMONIALS_FORM_VIEW_DEFAULT_OPTIONS">
+
+		<message>
+			<![CDATA[COM_JOOMTESTIMONIALS_FORM_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+	<fields>
+
+	</fields>
+</metadata>

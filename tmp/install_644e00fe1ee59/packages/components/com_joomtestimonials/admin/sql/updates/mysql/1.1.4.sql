@@ -1,0 +1,1 @@
+ALTER TABLE  `#__joomtestimonials` ADD COLUMN `vote` tinyint(1) NOT NULL AFTER  `website`

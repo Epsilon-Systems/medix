@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.0" type="plugin" group="content" method="upgrade">
+	<name>Content - JoomTestimonials</name>
+	<author>JoomBoost</author>
+	<creationDate>02/28/2018</creationDate>
+	<authorEmail>support@joomboost.com</authorEmail>
+	<authorUrl>https://www.joomboost.com</authorUrl>
+	<copyright>2013-2018 JoomBoost</copyright>
+	<license>GNU/GPL, http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<version>4.5.3</version>
+	<description>
+		<![CDATA[
+		<p class="alert alert-info">Display testimonials in your joomla content, plugin syntax: <code>{joomtestimonials id=xx}</code>, where <strong>xx</strong> is the id of your recipe</p>
+		]]>
+	</description>
+	<files>
+		<filename plugin="joomtestimonials">joomtestimonials.php</filename>
+	</files>
+</extension>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <field  name="supportCarousel" value="false"/>
+
+    <field
+            name = "layout"
+            title="COM_JOOMTESTIMONIALS_TESTIMONIALS_VIEW_TIMELINE_TITLE"
+            option="COM_JOOMTESTIMONIALS_TESTIMONIALS_VIEW_TIMELINE_OPTIONS"
+    />
+
+    <fieldset name="list_layout" title="COM_JOOMTESTIMONIALS_LAYOUT_LIST">
+        <field  name="supportCarousel" default ="0" type ="hidden"/>
+        <field  name="supportAnimation" default ="0" type ="hidden"/>
+
+        <field name="list_main" type="subform" multiple="false"
+               formsource="components/com_joomtestimonials/forms/common/list-main.xml"
+               label="List Options"
+               hiddenLabel="true"/>
+
+        <field type="spacer" name="myspacer1" hr="true" />
+
+        <field name="list_columns" type="subform" multiple="false"
+               formsource="components/com_joomtestimonials/forms/common/list_common_columns.xml"
+               label="List Options"
+               hiddenLabel="true"/>
+    </fieldset>
+
+    <fieldset name="item_layout" title="COM_JOOMTESTIMONIALS_LAYOUT_ITEM">
+        <field
+                name="list_type"
+                type="layoutType"
+                default=""
+                label="COM_JOOMTESTIMONIALS_CONFIG_TYPE"
+                description="COM_JOOMTESTIMONIALS_CONFIG_TYPE_DESC"
+                hiddenDescription="true"
+
+        />
+        <field type="spacer" name="myspacer2" hr="true" />
+        <field
+                name="font_size"
+                type="text"
+                default=""
+                label="COM_JOOMTESTIMONIALS_CONFIG_FONT_SIZE_LABEL"
+                description="COM_JOOMTESTIMONIALS_CONFIG_FONT_SIZE_DESC"
+                hiddenDescription="true"
+        />
+        <field
+                name="name_color"
+                type="color"
+                default=""
+                label="COM_JOOMTESTIMONIALS_CONFIG_NAME_COLOR_LABEL"
+        />
+        <field
+                name="text_color"
+                type="color"
+                default=""
+                label="COM_JOOMTESTIMONIALS_CONFIG_TEXT_COLOR_LABEL"
+                description="COM_JOOMTESTIMONIALS_CONFIG_TEXT_COLOR_DESC"
+                hiddenDescription="true"
+        />
+        <field
+                name="box_color"
+                type="color"
+                default=""
+                label="COM_JOOMTESTIMONIALS_CONFIG_BOX_COLOR_LABEL"
+                description="COM_JOOMTESTIMONIALS_CONFIG_BOX_COLOR_DESC"
+                hiddenDescription="true"
+        />
+
+        <field
+                name="box_border_color"
+                type="color"
+                default=""
+                label="COM_JOOMTESTIMONIALS_CONFIG_BOX_BORDER_COLOR_LABEL"
+                description="COM_JOOMTESTIMONIALS_CONFIG_BOX_BORDER_COLOR_DESC"
+                hiddenDescription="true"
+        />
+        <field type="spacer" name="myspacer3" hr="true" />
+
+
+        <field name="item_video" type="subform" multiple="false"
+               formsource="components/com_joomtestimonials/forms/common/item-video.xml"
+               label="Video Options"
+               hiddenLabel="true"/>
+
+        <field type="spacer" name="myspacer4" hr="true" />
+
+        <field
+                name="show_cfields"
+                type="radio"
+                class="btn-group"
+                default="1"
+                label="COM_JOOMTESTIMONIALS_CONFIG_SHOW_FIELDS_LABEL"
+                description="COM_JOOMTESTIMONIALS_CONFIG_SHOW_FIELDS_DESC"
+                hiddenDescription="true"
+        >
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field
+                name="cfields_position"
+                type="list"
+                default="1"
+                showon="show_cfields:1"
+                label="COM_JOOMTESTIMONIALS_CONFIG_CFIELDS_POSITION_LABEL"
+                description="COM_JOOMTESTIMONIALS_CONFIG_CFIELDS_POSITION_DESC"
+                hiddenDescription="true"
+        >
+            <option value="0">COM_JOOMTESTIMONIALS_CONFIG_BEFORE_TESTIMONIAL</option>
+            <option value="1">COM_JOOMTESTIMONIALS_CONFIG_AFTER_TESTIMONIAL</option>
+        </field>
+        <field type="spacer" name="myspacer5" hr="true" />
+        <field
+                name="show_vote"
+                type="radio"
+                class="btn-group"
+                default="1"
+                label="COM_JOOMTESTIMONIALS_CONFIG_SHOW_VOTE_LABEL"
+                description="">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+
+        <field
+                name="activestar_color"
+                type="color"
+                default="#edb867"
+                label="COM_JOOMTESTIMONIALS_ACTIVESTAR_COLOR_LABEL"
+                description=""
+                showon="show_vote:1"
+        />
+        <field
+                name="inactivestar_color"
+                type="color"
+                default="#d2d2d2"
+                label="COM_JOOMTESTIMONIALS_INACTIVESTAR_COLOR_LABEL"
+                description=""
+                showon="show_vote:1"
+        />
+        <field
+                name="rating_position"
+                type="list"
+                default="top"
+                label="COM_JOOMTESTIMONIALS_CONFIG_RATING_POSITION_LABEL"
+                description="COM_JOOMTESTIMONIALS_CONFIG_RATING_POSITION_DESC"
+                hiddenDescription="true"
+                showon="show_vote:1"
+        >
+            <option value="0">COM_JOOMTESTIMONIALS_CONFIG_RATING_POSITION_AFTERTITLE</option>
+            <option value="1">COM_JOOMTESTIMONIALS_CONFIG_RATING_POSITION_BEFORETITLE</option>
+            <option value="2">COM_JOOMTESTIMONIALS_CONFIG_RATING_POSITION_AFTERIMAGE</option>
+            <option value="3">COM_JOOMTESTIMONIALS_CONFIG_RATING_POSITION_BEFOREIMAGE</option>
+            <option value="4">COM_JOOMTESTIMONIALS_CONFIG_RATING_POSITION_AFTERTESTI</option>
+            <option value="5">COM_JOOMTESTIMONIALS_CONFIG_RATING_POSITION_BEFORETESTI</option>
+        </field>
+        <field type="spacer" name="myspacer6" hr="true" />
+        <field
+                name="show_permalink"
+                type="radio"
+                class="btn-group"
+                default="0"
+                label="COM_JOOMTESTIMONIALS_CONFIG_SHOW_PERMALINK_LABEL"
+        >
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field type="spacer" name="myspacer7" hr="true" />
+        <field
+                name="show_date"
+                type="radio"
+                class="btn-group"
+                default="0"
+                label="COM_JOOMTESTIMONIALS_CONFIG_SHOW_DATE_LABEL"
+                description="">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field type="spacer" name="myspacer8" hr="true" />
+        <field
+                name="show_position"
+                type="radio"
+                class="btn-group"
+                default="0"
+                label="COM_JOOMTESTIMONIALS_CONFIG_SHOW_POSITION_LABEL"
+                description="COM_JOOMTESTIMONIALS_CONFIG_SHOW_POSITION_DESC"
+                hiddenDescription="true">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field type="spacer" name="myspacer9" hr="true" />
+        <field
+                name="show_company"
+                type="radio"
+                class="btn-group"
+                default="0"
+                label="COM_JOOMTESTIMONIALS_CONFIG_SHOW_COMPANY_LABEL"
+                description="COM_JOOMTESTIMONIALS_CONFIG_SHOW_COMPANY_DESC"
+                hiddenDescription="true"
+        >
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field type="spacer" name="myspacer10" hr="true" />
+        <field
+                name="link_website"
+                type="radio"
+                class="btn-group"
+                default="0"
+                label="COM_JOOMTESTIMONIALS_CONFIG_LINK_WEBSITE_LABEL"
+                description="COM_JOOMTESTIMONIALS_CONFIG_LINK_WEBSITE_DESC"
+                hiddenDescription="true"
+        >
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field type="spacer" name="myspacer11" hr="true" />
+        <field
+                name="show_avatar"
+                type="radio"
+                class="btn-group"
+                default="1"
+                label="COM_JOOMTESTIMONIALS_CONFIG_SHOW_AVATAR_LABEL"
+                description="COM_JOOMTESTIMONIALS_CONFIG_SHOW_AVATAR_DESC"
+                hiddenDescription="true"
+        >
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+    </fieldset>
+
+    <fieldset name="advanced" title="COM_JOOMTESTIMONIALS_LAYOUT_ADVANCED">
+        <field name="item_textlimiter" type="subform" multiple="false"
+               formsource="components/com_joomtestimonials/forms/common/item-textlimiter.xml"
+               label="Text limiter Options" />
+
+        <field type="spacer" name="myspacer12" hr="true" />
+
+        <field name="list_animation" type="subform" multiple="false"
+               formsource="components/com_joomtestimonials/forms/common/list-animation.xml"
+               label="Animation Options" />
+
+        <field type="spacer" name="myspacer13" hr="true" />
+
+        <field name="custom_css" type="subform" multiple="false"
+               formsource="components/com_joomtestimonials/forms/common/customcss.xml"
+               label="Custom CSS"
+               hiddenLabel="true"/>
+
+    </fieldset>
+</form>

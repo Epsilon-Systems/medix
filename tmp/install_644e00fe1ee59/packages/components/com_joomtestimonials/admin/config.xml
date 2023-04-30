@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2013-2018 JoomBoost (https://www.joomboost.com). All rights reserved.
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+ --> 
+<config>
+
+	<fieldset
+		addfieldpath="/administrator/components/com_joomtestimonials/models/fields"
+		name="template"
+		label="COM_JOOMTESTIMONIALS_CONFIGSET_TEMPLATE_LABEL"
+		description="COM_JOOMTESTIMONIALS_CONFIGSET_TEMPLATE_DESC"
+		hiddenDescription="true"
+	>
+		<field
+				name="date_format"
+				type="text"
+				default="Y-m-d"
+				label="COM_JOOMTESTIMONIALS_DATE_FORMAT"
+		/>
+
+		<field
+			name="testimonials_layout"
+			type="layoutOptions"
+			label="COM_JOOMTESTIMONIALS_LAYOUT_LIST"
+			description="COM_JOOMTESTIMONIALS_LAYOUT_LIST_DESC"
+			hiddenDescription="true"
+		/>
+
+	</fieldset>
+	<fieldset
+		name="edit"
+		label="COM_JOOMTESTIMONIALS_CONFIGSET_EDIT_LABEL"
+		description="COM_JOOMTESTIMONIALS_CONFIGSET_EDIT_DESC"
+		hiddenDescription="true"
+	>
+		<field
+			name="allow_submit"
+			type="spacer"
+			label="COM_JOOMTESTIMONIALS_CONFIG_ALLOW_SUBMIT_LABEL"
+		/>
+		<field
+			name="captcha"
+			type="plugins"
+			folder="captcha"
+			default=""
+			label="COM_JOOMSTESTIMONIALS_CONFIG_FIELD_CAPTCHA_LABEL"
+			description="COM_JOOMSTESTIMONIALS_CONFIG_FIELD_CAPTCHA_DESC"
+			hiddenDescription="true"
+			filter="cmd" >
+			<option
+				value="">JOPTION_USE_DEFAULT</option>
+			<option
+				value="0">JOPTION_DO_NOT_USE</option>
+		</field>
+		<field
+			name="form_layout"
+			type="componentlayout"
+			label="COM_JOOMTESTIMONIALS_CONFIGSET_EDIT_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIGSET_EDIT_DESC"
+			hiddenDescription="true"
+			class="form-select"
+			menuitems="true"
+			extension="com_joomtestimonials"
+			view="form"
+			default="edit"
+		/>
+
+		<field
+			name="auto_approve"
+			type="radio"
+			default="0"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_AUTO_APPROVE_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_AUTO_APPROVE_DESC"
+			hiddenDescription="true"
+			class="btn-group"
+			labelclass="control-label"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+				name="redirect_to_login_page"
+				type="radio"
+				default="0"
+				label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_REDIRECT_TO_LOGIN_PAGE_LABEL"
+				description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_REDIRECT_TO_LOGIN_PAGE_DESC"
+				hiddenDescription="true"
+				class="btn-group"
+				labelclass="control-label"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		
+		<field
+			name="spacer2"
+			type="spacer"
+			hr="true"
+		/>		
+
+		<field
+			name="default_category"
+			type="category"
+			label="COM_JOOMTESTIMONIALS_CONFIG_DEFAULT_CATEGORY_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIG_DEFAULT_CATEGORY_DESC"
+			hiddenDescription="true"
+			extension="com_joomtestimonials"
+			labelclass="control-label"
+		/>
+
+	</fieldset>
+	<fieldset
+		name="fields"
+		label="COM_JOOMTESTIMONIALS_CONFIGSET_FIELDS_LABEL"
+		description="COM_JOOMTESTIMONIALS_CONFIGSET_FIELDS_DESC"
+	>
+		<field type="spacer" name="commonFieldsSettings" style="width:100%" label="COM_JOOMTESTIMONIALS_COMMON_SETTINGS"/>
+		<field
+				name="show_placeholders"
+				type="radio"
+				default="1"
+				label="COM_JOOMTESTIMONIALS_CONFIG_SHOW_PLACEHOLDERS"
+				class="btn-group"
+				labelclass="control-label"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field type="spacer" name="testisep1" style="width:100%" label="COM_JOOMTESTIMONIALS_TESTIMONIAL_SEPARATOR"/>
+		<field
+				name="testimonial_field_type"
+				type="radio"
+				class="btn-group"
+				default="0"
+				label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_TESTIMONIAL_FIELD_TYPE"
+				hiddenDescription="true"
+		>
+			<option value="0">Textarea</option>
+			<option value="1">Editor</option>
+		</field>
+		<field type="spacer" name="avatarsep1" style="width:100%" label="COM_JOOMTESTIMONIALS_AVATAR_SEPARATOR"/>
+		<field
+			name="picture_field_type"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_PICTURE_FIELD_TYPE"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_PICTURE_FIELD_TYPE_DESC"
+			hiddenDescription="true"
+		>
+			<option value="0">COM_JOOMTESTIMONIALS_CONFIG_FIELD_PICTURE_FIELD_TYPE_UPLOAD</option>
+			<option value="1">COM_JOOMTESTIMONIALS_CONFIG_FIELD_PICTURE_FIELD_TYPE_IMAGELIST</option>
+		</field>
+		<field
+				name="avatar_max_upload_size"
+				type="text"
+				default="200"
+				filter="integer"
+				label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_AVATAR_MAX_UPLOAD_SIZE"
+				description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_AVATAR_MAX_UPLOAD_SIZE_DESC"
+				hiddenDescription="true"
+				showon="picture_field_type:0"
+		/>
+		<field
+			name="picture_dir"
+			type="text"
+			default="images/avatar"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_PICTURE_FIELD_TYPE_DIR"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_PICTURE_FIELD_TYPE_DIR_DESC"
+			showon="picture_field_type:1"
+		/>
+		<field
+				name="field_avatar_visible"
+				type="radio"
+				class="btn-group"
+				default="1"
+				label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_AVATAR_VISIBLE_LABEL"
+				description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_AVATAR_VISIBLE_DESC"
+				hiddenDescription="true"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field
+				name="field_avatar_required"
+				type="radio"
+				class="btn-group"
+				default="0"
+				label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_AVATAR_REQUIRED_LABEL"
+				description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_AVATAR_REQUIRED_DESC"
+				hiddenDescription="true"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field type="spacer" name="avatarsep2" label="COM_JOOMTESTIMONIALS_EMAIL_SEPARATOR" />
+		<field
+			name="field_email_visible"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_EMAIL_VISIBLE_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_EMAIL_VISIBLE_DESC"
+			hiddenDescription="true"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="field_email_required"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_EMAIL_REQUIRED_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_EMAIL_REQUIRED_DESC"
+			hiddenDescription="true"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field type="spacer" name="avatarsep3" label="COM_JOOMTESTIMONIALS_VIDEO_SEPARATOR" />
+		<field
+				name="field_video_visible"
+				type="radio"
+				class="btn-group"
+				default="1"
+				label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_VIDEO_VISIBLE_LABEL"
+				description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_VIDEO_VISIBLE_DESC"
+				hiddenDescription="true"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+				name="field_video_required"
+				type="radio"
+				class="btn-group"
+				default="0"
+				label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_VIDEO_REQUIRED_LABEL"
+				description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_VIDEO_REQUIRED_DESC"
+				hiddenDescription="true"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field type="spacer" name="avatarsep4" label="COM_JOOMTESTIMONIALS_POSITION_SEPARATOR" />
+		<field
+			name="field_position_visible"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_POSITION_VISIBLE_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_POSITION_VISIBLE_DESC"
+			hiddenDescription="true"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="field_position_required"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_POSITION_REQUIRED_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_POSITION_REQUIRED_DESC"
+			hiddenDescription="true"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field type="spacer" name="avatarsep5" label="COM_JOOMTESTIMONIALS_COMPANY_SEPARATOR" />
+		<field
+			name="field_company_visible"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_COMPANY_VISIBLE_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_COMPANY_VISIBLE_DESC"
+			hiddenDescription="true"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="field_company_required"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_COMPANY_REQUIRED_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_COMPANY_REQUIRED_DESC"
+			hiddenDescription="true"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field type="spacer" name="avatarsep6" label="COM_JOOMTESTIMONIALS_WEBSITE_SEPARATOR" />
+		<field
+			name="field_website_visible"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_WEBSITE_VISIBLE_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_WEBSITE_VISIBLE_DESC"
+			hiddenDescription="true"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="field_website_required"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_WEBSITE_REQUIRED_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_WEBSITE_REQUIRED_DESC"
+			hiddenDescription="true"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field type="spacer" name="avatarsep7" label="COM_JOOMTESTIMONIALS_VOTE_SEPARATOR" />
+		<field
+			name="field_vote_visible"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_VOTE_VISIBLE_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_VOTE_VISIBLE_DESC"
+			hiddenDescription="true"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="field_vote_required"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_VOTE_REQUIRED_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_VOTE_REQUIRED_DESC"
+			hiddenDescription="true"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field type="spacer" name="avatarsep8" label="COM_JOOMTESTIMONIALS_CAT_SEPARATOR" />
+		<field
+			name="field_catid_visible"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_CATEGORY_VISIBLE_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_CATEGORY_VISIBLE_DESC"
+			hiddenDescription="true"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="field_catid_required"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_CATEGORY_REQUIRED_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_FIELD_CATEGORY_REQUIRED_DESC"
+			hiddenDescription="true"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+	</fieldset>
+	<fieldset
+		name="email"
+		label="COM_JOOMTESTIMONIALS_CONFIGSET_EMAIL_LABEL"
+		description="COM_JOOMTESTIMONIALS_CONFIGSET_EMAIL_DESC"
+	>
+		<field
+			name="email_notification"
+			type="text"
+			size="60"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_EMAIL_NOTIFICATION_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_EMAIL_NOTIFICATION_DESC"
+			hiddenDescription="true"
+			default=""
+			labelclass="control-label"
+		/>
+
+		<field
+			name="email_subject"
+			type="text"
+			size="60"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_EMAIL_SUBJECT_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_EMAIL_SUBJECT_DESC"
+			hiddenDescription="true"
+			default="New Testimonial Alert"
+			labelclass="control-label"
+		/>
+
+		<field
+			name="email_body"
+			type="textarea"
+			cols="60"
+			rows="7"
+			label="COM_JOOMTESTIMONIALS_CONFIG_FIELD_EMAIL_BODY_LABEL"
+			description="COM_JOOMTESTIMONIALS_CONFIG_FIELD_EMAIL_BODY_DESC"
+			hiddenDescription="true"
+			default="A new testimonial was submitted on your site:&lt;br /&gt;&lt;br /&gt;&#13;&#10;&lt;strong&gt;Name:&lt;/strong&gt; {name}&lt;br /&gt;&#13;&#10;&lt;strong&gt;Email:&lt;/strong&gt; {email}&lt;br /&gt;&#13;&#10;&lt;strong&gt;IP Address:&lt;/strong&gt; {ip}&lt;br /&gt;&#13;&#10;&lt;strong&gt;Position:&lt;/strong&gt; {position}&lt;br /&gt;&#13;&#10;&lt;strong&gt;Company:&lt;/strong&gt; {company}&lt;br /&gt;&#13;&#10;&lt;strong&gt;Website URL:&lt;/strong&gt; {website}&lt;br /&gt;&#13;&#10;&lt;strong&gt;Testimonial:&lt;/strong&gt;&lt;br /&gt;&#13;&#10;{testimonial}"
+			filter="raw"
+			class="input-xxlarge"
+			labelclass="control-label"
+		/>
+	</fieldset>
+	<fieldset
+		name="permissions"
+		description="JCONFIG_PERMISSIONS_DESC"
+		label="COM_JOOMTESTIMONIALS_PERMISSIONS_LABEL"
+	>
+		<field
+			name="rules"
+			type="rules"
+			component="com_joomtestimonials"
+			filter="rules"
+			validate="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			section="component"
+		/>
+	</fieldset>
+
+</config>

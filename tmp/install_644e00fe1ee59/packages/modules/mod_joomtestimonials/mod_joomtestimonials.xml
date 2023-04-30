@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>JoomTestimonials</name>
+	<author>JoomBoost</author>
+	<creationDate>February 2016</creationDate>
+	<copyright>Copyright (c) 2013 - 2018 JoomBoost. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@joomboost.com</authorEmail>
+	<authorUrl>https://www.joomboost.com</authorUrl>
+	<version>4.5.3</version>
+	<description>
+		<![CDATA[
+	<p class="alert alert-info">Show testimonials from JoomTestimonials Component</p>
+	]]>
+	</description>
+	<files>
+		<filename module="mod_joomtestimonials">mod_joomtestimonials.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>fields</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">mod_joomtestimonials.ini</language>
+		<language tag="en-GB">mod_joomtestimonials.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_joomtestimonials/fields">
+				<field type="langadmin" />
+				<field
+						name="source"
+						type="radio"
+						class="btn-group"
+						label="MOD_JOOMTESTIMONIALS_FIELD_SOURCE_LABEL"
+						description="MOD_JOOMTESTIMONIALS_FIELD_SOURCE_DESC"
+						default="0"
+				>
+					<option value="0">MOD_JOOMTESTIMONIALS_FIELD_SOURCE_CATEGORY</option>
+					<option value="1">MOD_JOOMTESTIMONIALS_FIELD_SOURCE_ID</option>
+				</field>
+
+				<field
+						name="catids"
+						type="category"
+						label="JCATEGORY"
+						description="MOD_JOOMTESTIMONIALS_FIELD_CATIDS_DESC"
+						extension="com_joomtestimonials"
+						labelclass="control-label"
+						multiple="true"
+						layout="joomla.form.field.list-fancy-select"
+						showon="source:0"
+				/>
+
+				<field
+						name="ids"
+						type="text"
+						label="MOD_JOOMTESTIMONIALS_FIELD_IDS_LABEL"
+						description="MOD_JOOMTESTIMONIALS_FIELD_IDS_DESC"
+						showon="source:1"
+				/>
+
+			</fieldset>
+
+			<fieldset name="uioptions" label="MOD_JOOMTESTIMONIALS_FIELDSET_UIOPTIONS"
+					  addfieldpath="/administrator/components/com_joomtestimonials/models/fields">
+
+				<field
+						name="testimonials_layout"
+						type="layoutOptions"
+						label="COM_JOOMTESTIMONIALS_LAYOUT_LIST"
+						description="COM_JOOMTESTIMONIALS_LAYOUT_LIST_DESC"
+						hiddenDescription="true"
+				/>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+						name="moduleclass_sfx"
+						type="text"
+						label="MOD_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+						description="MOD_MODULES_FIELD_MODULECLASS_SFX_DESC"
+				/>
+				<field
+						name="cache"
+						type="list"
+						default="1"
+						label="MOD_MODULES_FIELD_CACHING_LABEL"
+						description="MOD_MODULES_FIELD_CACHING_DESC"
+				>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">MOD_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+						name="cache_time"
+						type="text"
+						default="900"
+						label="MOD_MODULES_FIELD_CACHE_TIME_LABEL"
+						description="MOD_MODULES_FIELD_CACHE_TIME_DESC"
+				/>
+
+				<field
+						name="cachemode"
+						type="hidden"
+						default="static"
+				>
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

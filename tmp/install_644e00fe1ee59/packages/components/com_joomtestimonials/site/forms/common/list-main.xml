@@ -1,0 +1,82 @@
+<form>
+    <field
+            name="orderby"
+            type="list"
+            default="rdate"
+            label="COM_JOOMTESTIMONIALS_CONFIG_ORDERBY_LABEL"
+            description="COM_JOOMTESTIMONIALS_CONFIG_ORDERBY_DESC"
+            hiddenDescription="true">
+        <option value="rdate">JGLOBAL_MOST_RECENT_FIRST</option>
+        <option value="date">JGLOBAL_OLDEST_FIRST</option>
+        <option value="order">JGLOBAL_ARTICLE_MANAGER_ORDER</option>
+        <option value="rand">COM_JOOMTESTIMONIALS_CONFIG_ORDERBY_RAND</option>
+    </field>
+
+    <field
+            name="list_limit"
+            type="text"
+            default="10"
+            label="COM_JOOMTESTIMONIALS_CONFIG_LIST_LIMIT_LABEL"
+            description="COM_JOOMTESTIMONIALS_CONFIG_LIST_LIMIT_DESC"
+            hiddenDescription="true"
+    />
+
+    <field
+            name="strip_tags"
+            type="list"
+            default="1"
+            class="btn-group btn-yesno"
+            label="COM_JOOMTESTIMONIALS_STRIP_TAGS_LABEL"
+            description="COM_JOOMTESTIMONIALS_STRIP_TAGS_DESC"
+            hiddenDescription="true"
+    >
+        <option value="1">COM_JOOMTESTIMONIALS_ENBALE</option>
+        <option value="0">COM_JOOMTESTIMONIALS_DISABLE</option>
+    </field>
+
+    <field
+            name="show_pagination"
+            type="list"
+            default="2"
+            label="JGLOBAL_PAGINATION_LABEL"
+            description="JGLOBAL_PAGINATION_DESC"
+            hiddenDescription="true"
+    >
+        <option value="0">JHIDE</option>
+        <option value="1">JSHOW</option>
+        <option value="2">JGLOBAL_AUTO</option>
+    </field>
+
+    <field
+            name="show_pagination_results"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+            description="JGLOBAL_PAGINATION_RESULTS_DESC"
+            hiddenDescription="true"
+    >
+        <option value="0">JHIDE</option>
+        <option value="1">JSHOW</option>
+    </field>
+
+    <field name="show_submit_button" type="radio" class="btn-group" default="1"
+           label="COM_JOOMTESTIMONIALS_SHOW_SUBMIT_BUTTON" description="">
+        <option value="1">JYES</option>
+        <option value="0">JNO</option>
+    </field>
+
+    <field
+            name="form_type"
+            showon="show_submit_button:1"
+            type="list"
+            default="0"
+            label="COM_JOOMTESTIMONIALS_CONFIG_FORM_TYPE_LABEL"
+            hiddenDescription="true"
+    >
+        <option value="0">Modal</option>
+        <option value="1">New Page</option>
+    </field>
+
+
+</form>
