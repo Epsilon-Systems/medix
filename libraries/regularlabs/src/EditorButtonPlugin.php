@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         23.3.25449
+ * @version         23.4.18579
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -117,25 +117,11 @@ class EditorButtonPlugin extends JCMSPlugin
 
     protected function getPopupLink()
     {
-        switch ($this->main_type)
-        {
-            case 'component':
-                return 'index.php?'
-                    . 'option=com_' . $this->_name
-                    . '&view=items'
-                    . '&layout=popup'
-                    . '&tmpl=component'
-                    . '&editor=' . $this->editor_name
-                    . '&' . Session::getFormToken() . '=1';
-
-            case 'plugin':
-            default:
-                return 'index.php?rl_qp=1'
-                    . '&class=' . $this->popup_class
-                    . '&editor=' . $this->editor_name
-                    . '&tmpl=component'
-                    . '&' . Session::getFormToken() . '=1';
-        }
+        return 'index.php?rl_qp=1'
+            . '&class=' . $this->popup_class
+            . '&editor=' . $this->editor_name
+            . '&tmpl=component'
+            . '&' . Session::getFormToken() . '=1';
     }
 
     protected function getPopupOptions()

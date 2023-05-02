@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         23.3.25449
+ * @version         23.4.18579
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -38,7 +38,7 @@ class Cache
     {
         if (is_null($id))
         {
-            $caller = debug_backtrace()[1];
+            $caller = debug_backtrace(DEBUG_BACKTRACE_PROVIDE_OBJECT, 2)[1];
             $id     = [
                 $caller['class'],
                 $caller['function'],

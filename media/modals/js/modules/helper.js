@@ -1,6 +1,6 @@
 /**
  * @package         Modals
- * @version         12.3.2
+ * @version         12.3.4
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -430,10 +430,9 @@ export const Helper = {
         iframe.style.width    = '100%';
         iframe.style.height   = '100%';
         iframe.referrerpolicy = 'no-referrer-when-downgrade';
-
-        if (config.allow) {
-            iframe.setAttribute('allow', config.allow);
-        }
+        // allow fullscreen and autoplay for videos
+        iframe.setAttribute('allowfullscreen', 'true');
+        iframe.setAttribute('allow', 'autoplay; fullscreen');
 
         iframe.onload = function() {
             iframe.classList.add('node-ready');

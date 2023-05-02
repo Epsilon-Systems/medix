@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         23.3.25449
+ * @version         23.4.18579
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -559,7 +559,9 @@ class ArrayHelper
             return $array;
         }
 
-        uksort($array, fn($key1, $key2) => array_search($key1, $order) > array_search($key2, $order));
+        uksort($array, function ($key1, $key2) use ($order) {
+            return array_search($key1, $order) > array_search($key2, $order);
+        });
 
         return $array;
     }

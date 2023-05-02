@@ -1,6 +1,6 @@
 /**
  * @package         Regular Labs Library
- * @version         23.3.25449
+ * @version         23.4.18579
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -14,7 +14,7 @@
     window.RegularLabs = window.RegularLabs || {};
 
     window.RegularLabs.Scripts = window.RegularLabs.Scripts || {
-        version: '23.3.25449',
+        version: '23.4.18579',
 
         ajax_list        : [],
         started_ajax_list: false,

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         23.3.25449
+ * @version         23.4.18579
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -43,7 +43,8 @@ class ContentArticlesField extends RL_FormField
         $query = $this->db->getQuery(true)
             ->select('COUNT(*)')
             ->from('#__content AS i')
-            ->where('i.access > -1');
+            ->where('i.access > -1')
+            ->where('i.state > -1');
         $this->db->setQuery($query);
         $total = $this->db->loadResult();
 

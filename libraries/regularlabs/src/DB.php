@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         23.3.25449
+ * @version         23.4.18579
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -571,7 +571,10 @@ class DB
             return 'NOW()';
         }
 
-        if (is_int($value) || ctype_digit($value))
+        if (
+            (empty($options->quote) || ! $options->quote)
+            && (is_int($value) || ctype_digit($value))
+        )
         {
             return $value;
         }

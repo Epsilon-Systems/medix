@@ -1,6 +1,6 @@
 /**
  * @package         Regular Labs Library
- * @version         23.3.25449
+ * @version         23.4.18579
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -49,10 +49,6 @@
 .rl-flex {
   display: flex;
 }
-.rl-flex .rl-flex > {
-  flex: 1;
-}
-
 .rl-mr-1 {
   margin-right: 0.25rem;
 }
@@ -312,9 +308,6 @@
   margin-right: 0;
 }
 
-.rl-footer .rl-footer-review {
-  margin-top: 5px;
-}
 .rl-footer .rl-footer-review a.stars {
   display: inline-block;
 }
@@ -481,7 +474,7 @@ input.rl-key-field.form-control {
   color: #fff;
 }
 .rl-alert.alert.rl-alert-light.alert-info {
-  background-color: #e6eff9;
+  background-color: #e7eff9;
   border: 2px solid #2a69b7;
   color: #000;
 }
@@ -592,7 +585,6 @@ input.rl-key-field.form-control {
   .rl-w-md-25 {
     width: 25%;
   }
-
   .rl-w-md-30 {
     width: 30%;
   }

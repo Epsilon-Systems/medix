@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         23.3.25449
+ * @version         23.4.18579
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -15,21 +15,32 @@ defined('_JEXEC') or die;
 
 use RegularLabs\Library\Form\FormField as RL_FormField;
 use RegularLabs\Library\ShowOn as RL_ShowOn;
+use RegularLabs\Library\RegEx as RL_RegEx;
 
 class ShowOnField extends RL_FormField
 {
     protected function getInput()
     {
-        $value       = (string) $this->get('value');
-        $class       = $this->get('class', '');
-        $formControl = $this->get('form', $this->formControl);
-        $formControl = $formControl == 'root' ? '' : $formControl;
+        $value = (string) $this->get('value');
+        $class = $this->get('class', '');
 
         if ( ! $value)
         {
             return $this->getControlGroupEnd()
                 . RL_ShowOn::close()
                 . $this->getControlGroupStart();
+        }
+
+        $formControl = $this->get('form', $this->formControl);
+        $formControl = $formControl == 'root' ? '' : $formControl;
+
+        while (substr($value, 0, 3) == '../')
+        {
+            $value = substr($value, 3);
+            if (strpos($formControl, '[') !== false)
+            {
+                $formControl = RL_RegEx::replace('^(.*)\[.*?\]$', '\1', $formControl);
+            }
         }
 
         return $this->getControlGroupEnd()

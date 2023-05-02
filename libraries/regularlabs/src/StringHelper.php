@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         23.3.25449
+ * @version         23.4.18579
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -334,7 +334,7 @@ class StringHelper extends \Joomla\String\StringHelper
             return $string;
         }
 
-        if (!function_exists('mb_decode_numericentity'))
+        if ( ! function_exists('mb_decode_numericentity'))
         {
             return $string;
         }
@@ -363,7 +363,7 @@ class StringHelper extends \Joomla\String\StringHelper
             return $string;
         }
 
-        if (!function_exists('mb_decode_numericentity'))
+        if ( ! function_exists('mb_decode_numericentity'))
         {
             return $string;
         }

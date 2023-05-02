@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         23.3.25449
+ * @version         23.4.18579
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -25,9 +25,9 @@ class EditorButtonPopup
     protected $main_type         = 'plugin';
     protected $require_core_auth = true;
     private   $_params;
-    public $form;
-    public $editor_name       = '';
-    public $params;
+    public    $form;
+    public    $editor_name       = '';
+    public    $params;
 
     public function render()
     {

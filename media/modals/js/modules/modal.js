@@ -1,6 +1,6 @@
 /**
  * @package         Modals
- * @version         12.3.2
+ * @version         12.3.4
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -10,8 +10,8 @@
 
 'use strict';
 
-import {Helper} from './helper.js?12.3.2';
-import {Slide} from './slide.js?12.3.2';
+import {Helper} from './helper.js?12.3.4';
+import {Slide} from './slide.js?12.3.4';
 
 export function Modal(link, group) {
     this.group                = group;
