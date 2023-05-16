@@ -6,7 +6,6 @@ nav ul {
 nav li {
   display: inline-block;
   margin: 0 10px;
-  display: flex;
 }
 nav a {
   display: inline-block;
@@ -15,7 +14,7 @@ nav a {
   color: #fff;
   font-family: 'Quicksand', sans-serif;
   border-radius: 5px;
-  display: flex;
+  text-align: center;
 }
 nav a:hover {
   border-color: #1c87c9;
