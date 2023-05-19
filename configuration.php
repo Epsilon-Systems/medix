@@ -33,7 +33,7 @@ class JConfig {
 	public $offset = 'America/Mexico_City';
 	public $mailonline = true;
 	public $mailer = 'smtp';
-	public $mailfrom = 'mirazondepeso@gmail.com';
+	public $mailfrom = 'hola.contacto@mirazondepeso.com.mx';
 	public $fromname = 'Mi razón de peso';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = true;
