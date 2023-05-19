@@ -1,92 +1,93 @@
-nav ul {
+nav{
+  width:100%;
   display: flex;
-  align-items: center;
+}
+nav ul,li{
+  border-radius: 30px;
+  width: 100%;
+  display: flex;
   justify-content: center;
-}
-nav li {
-  display: inline-block;
-  margin: 0 10px;
-}
-nav a {
-  display: inline-block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #fff;
-  font-family: 'Quicksand', sans-serif;
-  border-radius: 5px;
   text-align: center;
+}
+nav li{
+  align-items: center;
+}
+nav a{
+  color: #fff;
 }
 nav a:hover {
   border-color: #1c87c9;
   text-decoration: underline #fff;
+  color: #fff;
 }
 .paciente{
   background-color: #e8bd41;
-  border-radius:  30px;
-  padding: 10px;
   color: #fff;
   margin-left: 80px;
 }
 .profesional{
   background-color: #d94353;
-  border-radius:  30px;
-  padding: 10px;
   color: #fff;
   margin-left: 80px;
 }
 .doctor{
   background-color: #34adbb;
-  border-radius:  30px;
-  text-align: center;
   color: #fff;
   margin-left: 80px;
 }
-/*SEGUNDO HEADER*/
+/*HEADER DOCTORES*/
 .inicio{
   background-color: #e8bd41;
-  border-radius:  30px;
-  padding: 10px;
-  text-align: center;
   color: #fff;
-  width: auto;
-  margin-left: 80px;
+  margin-left: 50px;
 }
-.especialistas{
-  background-color: #d96637;
-  border-radius:  30px;
-  padding: 10px;
-  text-align: center;
+.algoritmo{
+  background-color: #e56730;
   color: #fff;
-  width: auto;
-  margin-left: 80px;
+  margin-left: 40px;
 }
-.recursos{
-  background-color: #d94353;
-  border-radius:  30px;
-  padding: 10px;
-  text-align: center;
+.calculadora{
+  background-color: #e5424e;
   color: #fff;
-  width: auto;
-  margin-left: 80px;
+  margin-left: 40px;
+}
+.descarga{
+  background-color: #b74494;
+  color: #fff;
+  margin-left: 40px;
+}
+.casos{
+  background-color: #37b2bc;
+  color: #fff;
+  margin-left: 40px;
+}
+.portafolio{
+  background-color: #37bc7a;
+  color: #fff;
+  margin-left: 40px;
+}
+/*HEADER PACIENTES*/
+.apoyo{
+  background-color: #e56730;
+  color: #fff;
+  margin-left: 40px;
+}
+.alimenta{
+  background-color: #e5424e;
+  color: #fff;
+  margin-left: 40px;
+}
+.actividad{
+  background-color: #b74494;
+  color: #fff;
+  margin-left: 40px;
 }
 .comunidad{
-  background-color: #ae4595;
-  border-radius:  30px;
-  padding: 10px;
-  text-align: center;
+  background-color: #37b2bc;
   color: #fff;
-  width: auto;
-  margin-left: 80px;
+  margin-left: 40px;
 }
-.contacto{
-  background-color: #34adbb;
-  border-radius:  30px;
-  padding: 10px;
-  text-align: center;
-  color: #fff;
-  width: auto;
-  margin-left: 80px;
-}
+/*SEGUNDO HEADER*/
 .scroll-header {
   display: none;
   position: fixed;
