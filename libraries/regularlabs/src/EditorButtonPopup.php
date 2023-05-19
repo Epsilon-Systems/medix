@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         23.4.18579
+ * @version         23.5.7450
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -21,13 +21,13 @@ use ReflectionClass;
 
 class EditorButtonPopup
 {
+    public    $editor_name       = '';
+    public    $form;
+    public    $params;
     protected $extension         = '';
     protected $main_type         = 'plugin';
     protected $require_core_auth = true;
     private   $_params;
-    public    $form;
-    public    $editor_name       = '';
-    public    $params;
 
     public function render()
     {

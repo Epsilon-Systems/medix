@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         23.4.18579
+ * @version         23.5.7450
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -311,64 +311,6 @@ class StringHelper extends \Joomla\String\StringHelper
         $string = str_replace(chr(194) . chr(160), ' ', $string);
 
         return $string;
-    }
-
-    /**
-     * utf8 decode a string (or array of strings)
-     *
-     * @param string $string
-     *
-     * @return array|string
-     */
-    public static function utf8_decode($string)
-    {
-        $array = ArrayHelper::applyMethodToValues([$string]);
-
-        if ( ! is_null($array))
-        {
-            return $array;
-        }
-
-        if ( ! is_string($string))
-        {
-            return $string;
-        }
-
-        if ( ! function_exists('mb_decode_numericentity'))
-        {
-            return $string;
-        }
-
-        return mb_decode_numericentity($string, [0x80, 0xffff, 0, ~0], 'UTF-8');
-    }
-
-    /**
-     * utf8 encode a string (or array of strings)
-     *
-     * @param string $string
-     *
-     * @return array|string
-     */
-    public static function utf8_encode($string)
-    {
-        $array = ArrayHelper::applyMethodToValues([$string]);
-
-        if ( ! is_null($array))
-        {
-            return $array;
-        }
-
-        if ( ! is_string($string))
-        {
-            return $string;
-        }
-
-        if ( ! function_exists('mb_decode_numericentity'))
-        {
-            return $string;
-        }
-
-        return mb_encode_numericentity($string, [0x80, 0xffff, 0, ~0], 'UTF-8');
     }
 
     /**
@@ -994,6 +936,64 @@ class StringHelper extends \Joomla\String\StringHelper
         }
 
         return self::ucfirst($string);
+    }
+
+    /**
+     * utf8 decode a string (or array of strings)
+     *
+     * @param string $string
+     *
+     * @return array|string
+     */
+    public static function utf8_decode($string)
+    {
+        $array = ArrayHelper::applyMethodToValues([$string]);
+
+        if ( ! is_null($array))
+        {
+            return $array;
+        }
+
+        if ( ! is_string($string))
+        {
+            return $string;
+        }
+
+        if ( ! function_exists('mb_decode_numericentity'))
+        {
+            return $string;
+        }
+
+        return mb_decode_numericentity($string, [0x80, 0xffff, 0, ~0], 'UTF-8');
+    }
+
+    /**
+     * utf8 encode a string (or array of strings)
+     *
+     * @param string $string
+     *
+     * @return array|string
+     */
+    public static function utf8_encode($string)
+    {
+        $array = ArrayHelper::applyMethodToValues([$string]);
+
+        if ( ! is_null($array))
+        {
+            return $array;
+        }
+
+        if ( ! is_string($string))
+        {
+            return $string;
+        }
+
+        if ( ! function_exists('mb_decode_numericentity'))
+        {
+            return $string;
+        }
+
+        return mb_encode_numericentity($string, [0x80, 0xffff, 0, ~0], 'UTF-8');
     }
 
     /**

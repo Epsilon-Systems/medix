@@ -1,6 +1,6 @@
 /**
  * @package         Modals
- * @version         12.3.4
+ * @version         12.3.5
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -288,6 +288,7 @@
 [data-modals-element=modal] [data-modals-element=slide-title] {
   overflow: auto;
   font-size: calc(1.3rem + 0.6vw);
+  line-height: initial;
 }
 [data-modals-element=modal] [data-modals-element=slide-description] {
   overflow: auto;

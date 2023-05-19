@@ -1,6 +1,6 @@
 /**
  * @package         Modals
- * @version         12.3.4
+ * @version         12.3.5
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -10,7 +10,7 @@
 
 'use strict';
 
-import {Helper} from './helper.js?12.3.4';
+import {Helper} from './helper.js?12.3.5';
 
 export function Slide(modal, link, id) {
     this.modal          = modal;

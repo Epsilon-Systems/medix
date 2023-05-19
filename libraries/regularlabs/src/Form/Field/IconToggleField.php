@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         23.4.18579
+ * @version         23.5.7450
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -25,12 +25,12 @@ class IconToggleField extends RL_FormField
             JPATH_SITE . '/libraries/regularlabs/layouts'
         ))->render(
             [
-                'id'    => $this->id,
-                'name'  => $this->name,
-                'icon1' => strtolower($this->get('icon1', 'arrow-down')),
-                'icon2' => $this->get('icon2', 'arrow-up'),
-                'text1' => $this->get('text1', ''),
-                'text2' => $this->get('text2', ''),
+                'id'     => $this->id,
+                'name'   => $this->name,
+                'icon1'  => strtolower($this->get('icon1', 'arrow-down')),
+                'icon2'  => $this->get('icon2', 'arrow-up'),
+                'text1'  => $this->get('text1', ''),
+                'text2'  => $this->get('text2', ''),
                 'class1' => $this->get('class1', ''),
                 'class2' => $this->get('class2', ''),
             ]

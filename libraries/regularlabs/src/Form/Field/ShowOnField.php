@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         23.4.18579
+ * @version         23.5.7450
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -14,8 +14,8 @@ namespace RegularLabs\Library\Form\Field;
 defined('_JEXEC') or die;
 
 use RegularLabs\Library\Form\FormField as RL_FormField;
-use RegularLabs\Library\ShowOn as RL_ShowOn;
 use RegularLabs\Library\RegEx as RL_RegEx;
+use RegularLabs\Library\ShowOn as RL_ShowOn;
 
 class ShowOnField extends RL_FormField
 {

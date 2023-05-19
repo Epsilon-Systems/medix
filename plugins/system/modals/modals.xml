@@ -2,8 +2,8 @@
 <extension version="4" type="plugin" group="system" method="upgrade">
   <name>PLG_SYSTEM_MODALS</name>
   <description>PLG_SYSTEM_MODALS_DESC</description>
-  <version>12.3.4</version>
-  <creationDate>April 2023</creationDate>
+  <version>12.3.5</version>
+  <creationDate>May 2023</creationDate>
   <author>Regular Labs (Peter van Westen)</author>
   <authorEmail>info@regularlabs.com</authorEmail>
   <authorUrl>https://regularlabs.com</authorUrl>

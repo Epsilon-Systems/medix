@@ -186,8 +186,9 @@
     }
 
     [data-modals-element="slide-title"] {
-        overflow:  auto;
-        font-size: calc(1.3rem + 0.6vw);
+        overflow:    auto;
+        font-size:   calc(1.3rem + 0.6vw);
+        line-height: initial;
     }
 
     [data-modals-element="slide-description"] {

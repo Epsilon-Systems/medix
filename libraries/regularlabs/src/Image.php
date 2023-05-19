@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         23.4.18579
+ * @version         23.5.7450
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -17,6 +17,7 @@ require_once dirname(__FILE__, 2) . '/vendor/autoload.php';
 
 use Intervention\Image\Exception\NotReadableException as NotReadableException;
 use Intervention\Image\ImageManagerStatic as ImageManager;
+use Joomla\CMS\Filesystem\File as JFile;
 use Joomla\CMS\Uri\Uri as JUri;
 
 class Image
@@ -178,20 +179,21 @@ class Image
     public function getFileInfo($file, $file_path)
     {
         $file_path = urldecode($file_path);
+        $path_info = @pathinfo($file_path);
+        $size_info = @getimagesize($file_path);
 
-        $file_exists = $this->exists($file_path);
-
-        $path_info = $file_exists ? pathinfo($file_path) : null;
-        $size_info = $file_exists ? getimagesize($file_path) : null;
+        $file_name      = $path_info['basename'] ?? basename($file_path);
+        $file_stem      = $path_info['filename'] ?? JFile::stripExt($file_name);
+        $file_extension = $path_info['extension'] ?? JFile::getExt($file_name);
 
         return (object) [
             'folder'         => File::getDirName($file),
             'folder_path'    => $path_info['dirname'] ?? null,
             'file'           => $file,
             'file_path'      => $file_path,
-            'file_name'      => $path_info['basename'] ?? null,
-            'file_stem'      => $path_info['filename'] ?? null,
-            'file_extension' => $path_info['extension'] ?? null,
+            'file_name'      => $file_name,
+            'file_stem'      => $file_stem,
+            'file_extension' => $file_extension,
             'mime'           => $size_info['mime'] ?? null,
             'width'          => $size_info[0] ?? null,
             'height'         => $size_info[1] ?? null,
@@ -305,8 +307,8 @@ class Image
         $this->attributes->srcset = $this->getSrcset();
         $this->attributes->alt    = $this->getAlt();
         $this->attributes->title  = $this->getTitle(true);
-        $this->attributes->width  = $this->output->width;
-        $this->attributes->height = $this->output->height;
+        $this->attributes->width  = $this->output->width ?: $this->attributes->width ?? null;
+        $this->attributes->height = $this->output->height ?: $this->attributes->height ?? null;
 
         if ($this->settings->lazy_loading)
         {
@@ -754,11 +756,6 @@ class Image
 
     private function handleDimensions($width = 0, $height = 0)
     {
-        if ( ! $this->exists($this->output->file_path))
-        {
-            return $this;
-        }
-
         $this->output->width  = (int) $width;
         $this->output->height = (int) $height;
 
@@ -768,6 +765,11 @@ class Image
             $this->output->width  = $this->input->width;
             $this->output->height = $this->input->height;
 
+            return $this;
+        }
+
+        if ( ! $this->exists($this->output->file_path))
+        {
             return $this;
         }
 

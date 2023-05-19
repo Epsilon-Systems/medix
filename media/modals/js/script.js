@@ -1,6 +1,6 @@
 /**
  * @package         Modals
- * @version         12.3.4
+ * @version         12.3.5
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -8,8 +8,8 @@
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
-import {Modal} from './modules/modal.js?12.3.4';
-import {Helper} from './modules/helper.js?12.3.4';
+import {Modal} from './modules/modal.js?12.3.5';
+import {Helper} from './modules/helper.js?12.3.5';
 
 (function() {
     'use strict';

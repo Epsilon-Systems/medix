@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         23.4.18579
+ * @version         23.5.7450
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -14,35 +14,35 @@ namespace RegularLabs\Library\Form;
 defined('_JEXEC') or die;
 
 use DateTimeZone;
-use Joomla\Database\DatabaseDriver as JDatabaseDriver;
+use Joomla\CMS\Application\CMSApplicationInterface as JCMSApplicationInterface;
 use Joomla\CMS\Factory as JFactory;
 use Joomla\CMS\Form\Form as JForm;
 use Joomla\CMS\Form\FormField as JFormField;
 use Joomla\CMS\Form\FormHelper as JFormHelper;
 use Joomla\CMS\HTML\HTMLHelper as JHtml;
 use Joomla\CMS\Language\Text as JText;
+use Joomla\Database\DatabaseDriver as JDatabaseDriver;
 use Joomla\Registry\Registry as JRegistry;
 use ReflectionClass;
 use RegularLabs\Library\Document as RL_Document;
 use RegularLabs\Library\Parameters as RL_Parameters;
 use RegularLabs\Library\RegEx as RL_RegEx;
 use RegularLabs\Library\StringHelper as RL_String;
-use Joomla\CMS\Application\CMSApplicationInterface as JCMSApplicationInterface;
 use SimpleXMLElement;
 
 class FormField extends JFormField
 {
-    /* @var object|JRegistry $attributes */
-    public                          $attributes;
-    public bool                     $collapse_children = false;
     public JCMSApplicationInterface $app;
-    public JDatabaseDriver          $db;
-    public bool                     $is_select_list    = false;
-    public int                      $max_list_count    = 0;
-    public                          $params;
-    public array                    $parent_request    = [];
-    public bool                     $use_ajax          = false;
-    public bool                     $use_tree_select   = false;
+    /* @var object|JRegistry $attributes */
+    public                 $attributes;
+    public bool            $collapse_children = false;
+    public JDatabaseDriver $db;
+    public bool            $is_select_list    = false;
+    public int             $max_list_count    = 0;
+    public                 $params;
+    public array           $parent_request    = [];
+    public bool            $use_ajax          = false;
+    public bool            $use_tree_select   = false;
 
     /**
      * @param JForm $form

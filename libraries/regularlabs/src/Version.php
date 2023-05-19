@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         23.4.18579
+ * @version         23.5.7450
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://regularlabs.com
@@ -139,6 +139,20 @@ class Version
     }
 
     /**
+     * Get the link to the documentation for the footer
+     *
+     * @param $name
+     *
+     * @return string
+     */
+    private static function getFooterDocumentationLink($name)
+    {
+        $alias = Extension::getAliasByName($name);
+
+        return JText::sprintf('RL_GO_TO_DOCUMENTATION', '<span class="icon-book" aria-hidden="true"></span>', '<a href="https://docs4.regularlabs.com/' . $alias . '" target="_blank">', '</a>');
+    }
+
+    /**
      * Get the Regular Labs logo for the footer
      *
      * @return string
@@ -167,49 +181,6 @@ class Version
         $suffix = self::getVersionSuffix($alias);
 
         return '<a href="https://regularlabs.com/' . $alias . '" target="_blank">' . $name . '</a>' . $suffix;
-    }
-
-    /**
-     * Get the link to the documentation for the footer
-     *
-     * @param $name
-     *
-     * @return string
-     */
-    private static function getFooterDocumentationLink($name)
-    {
-        $alias = Extension::getAliasByName($name);
-
-        return JText::sprintf('RL_GO_TO_DOCUMENTATION', '<span class="icon-book" aria-hidden="true"></span>', '<a href="https://docs4.regularlabs.com/' . $alias . '" target="_blank">', '</a>');
-    }
-
-    /**
-     * Get the version for the footer name
-     *
-     * @param $alias
-     *
-     * @return string
-     */
-    private static function getVersionSuffix($alias)
-    {
-        $version = self::get($alias);
-
-        if ( ! $version)
-        {
-            return '';
-        }
-
-        if (strpos($version, 'PRO') !== false)
-        {
-            return ' v' . str_replace('PRO', '', $version) . ' <small>[PRO]</small>';
-        }
-
-        if (strpos($version, 'FREE') !== false)
-        {
-            return ' v' . str_replace('FREE', '', $version) . ' <small>[FREE]</small>';
-        }
-
-        return ' v' . $version;
     }
 
     /**
@@ -318,5 +289,34 @@ class Version
         }
 
         return ['index.php?option=com_regularlabsmanager', ''];
+    }
+
+    /**
+     * Get the version for the footer name
+     *
+     * @param $alias
+     *
+     * @return string
+     */
+    private static function getVersionSuffix($alias)
+    {
+        $version = self::get($alias);
+
+        if ( ! $version)
+        {
+            return '';
+        }
+
+        if (strpos($version, 'PRO') !== false)
+        {
+            return ' v' . str_replace('PRO', '', $version) . ' <small>[PRO]</small>';
+        }
+
+        if (strpos($version, 'FREE') !== false)
+        {
+            return ' v' . str_replace('FREE', '', $version) . ' <small>[FREE]</small>';
+        }
+
+        return ' v' . $version;
     }
 }

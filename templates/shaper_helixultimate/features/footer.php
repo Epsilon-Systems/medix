@@ -13,6 +13,9 @@ defined ('_JEXEC') or die();
  *
  * @since	1.0.0
  */
+$app = JFactory::getApplication();
+$menu = $app->getMenu();
+$currentItem = $menu->getActive();
 class HelixUltimateFeatureFooter
 {
 	/**
@@ -38,24 +41,21 @@ class HelixUltimateFeatureFooter
 
 			if($this->params->get('copyright'))
 			{
-				$output .= '<span class="sp-copyright"><p>Powered by MD+ Agencia de Marketing Digital y Estudio Creativo</p><p>Developed by Epsilon Systems Group</p>' .
-				    
-					str_ireplace(
-						'{year}', date('Y'),
-						str_ireplace(
-							'joomla templates',
-							'2023',
-							'<a target="_blank" rel="noopener noreferrer" href="https://mdmasmkt.com/">Joomla Templates</a>',
-							str_ireplace(
-								'joomshaper',
-								'<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/epsilonsystems">JoomShaper</a>',
-								$this->params->get('copyright')
-							)
-						)
-					)  .
-					'</span>';
 
-				return $output;
+              if ($currentItem) {
+                  $pageId = $currentItem->id;
+                  if ($pageId == 9) { // ID universal
+                      // Código para el pie de página de la página 1
+                      echo '<footer>Pie de página de la página 1</footer>';
+                  } elseif ($pageId == 30) { // ID doctores
+                      // Código para el pie de página de la página 2
+                      echo '<footer>Pie de página de la página 2</footer>';
+                  } elseif ($pageId == 36) { // ID pacientes
+                      // Código para el pie de página por defecto
+                      echo '<footer>Pie de página por defecto</footer>';
+                  }
+              }
+
 			}
 		}
 	}
